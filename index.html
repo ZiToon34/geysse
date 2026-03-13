@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guillaume Geysse — Élagage & Débroussaillage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .bento-item:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-[#FDFDFB] text-[#1A2F23] selection:bg-[#A3B18A] selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 bg-[#344E41] rounded-2xl flex items-center justify-center shadow-lg rotate-3 overflow-hidden">
+                    <img src="assets/logo.png" alt="Logo Guillaume Geysse" class="w-full h-full object-contain p-1">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-black text-xl tracking-tighter uppercase leading-none">Guillaume Geysse</span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#A3B18A]">Arboriculture & Nature</span>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-10">
+                <a href="#services" class="text-sm font-bold uppercase tracking-wider hover:text-[#A3B18A] transition-colors">Services</a>
+                <a href="#realisations" class="text-sm font-bold uppercase tracking-wider hover:text-[#A3B18A] transition-colors">Réalisations</a>
+                <a href="#contact" class="text-sm font-bold uppercase tracking-wider hover:text-[#A3B18A] transition-colors">Contact</a>
+                <a href="tel:0600000000" class="bg-[#344E41] text-white px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest hover:scale-105 transition-transform shadow-xl flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Devis Express
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="menu-btn" class="lg:hidden p-2 bg-white rounded-lg shadow-sm">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 p-8 flex flex-col gap-6 lg:hidden">
+            <a href="#services" class="text-xl font-bold">Services</a>
+            <a href="#realisations" class="text-xl font-bold">Réalisations</a>
+            <a href="#contact" class="text-xl font-bold">Contact</a>
+            <a href="tel:0600000000" class="bg-[#344E41] text-white p-5 rounded-2xl text-center font-bold">Appeler maintenant</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-[#A3B18A]/10 -skew-x-12 translate-x-32 hidden lg:block"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#A3B18A]/20 text-[#344E41] rounded-full text-xs font-bold uppercase tracking-widest mb-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+                        Intervention certifiée & Assurée
+                    </div>
+                    <h1 class="text-6xl lg:text-8xl font-black leading-[0.9] mb-8 tracking-tighter text-[#1A2F23]">
+                        L'art de la <br/> <span class="text-[#A3B18A]">taille haute</span>.
+                    </h1>
+                    <p class="text-xl text-gray-500 mb-10 max-w-md leading-relaxed font-medium">
+                        Expertise technique en élagage et débroussaillage pour sublimer et sécuriser vos espaces naturels.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="px-10 py-5 bg-[#344E41] text-white rounded-full font-black text-sm uppercase tracking-widest hover:shadow-2xl hover:shadow-[#344E41]/30 transition-all transform hover:-translate-y-1 inline-block text-center">
+                            Réserver un diagnostic
+                        </a>
+                        <div class="flex -space-x-3 items-center ml-4">
+                            <img src="https://i.pravatar.cc/100?img=11" class="w-10 h-10 rounded-full border-2 border-white" alt="Client 1">
+                            <img src="https://i.pravatar.cc/100?img=12" class="w-10 h-10 rounded-full border-2 border-white" alt="Client 2">
+                            <img src="https://i.pravatar.cc/100?img=13" class="w-10 h-10 rounded-full border-2 border-white" alt="Client 3">
+                            <span class="pl-6 text-xs font-bold text-gray-400">150+ Clients locaux</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 relative">
+                    <div class="relative rounded-[3rem] overflow-hidden shadow-2xl rotate-2 aspect-[4/5] lg:aspect-auto lg:h-[600px]">
+                        <img src="assets/elageur.png" alt="Élagueur au travail" class="w-full h-full object-cover">
+                        <div class="absolute bottom-8 left-8 right-8 glass-card p-6 rounded-3xl text-white">
+                            <p class="text-sm font-bold opacity-80 uppercase mb-1">Dernière mission</p>
+                            <p class="text-xl font-bold">Saint Maurice-Navacelles — Élagage complet</p>
+                        </div>
+                    </div>
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#A3B18A] rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32">
+        <div class="container mx-auto px-6">
+            <div class="mb-20">
+                <h2 class="text-4xl lg:text-5xl font-black mb-4 tracking-tighter">Services spécialisés</h2>
+                <p class="text-gray-400 font-medium">Une approche respectueuse de l'environnement et de la biologie de l'arbre.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group relative bg-white border border-gray-100 p-10 rounded-[2.5rem] hover:bg-[#344E41] transition-all duration-500 shadow-sm hover:shadow-2xl">
+                    <div class="w-14 h-14 bg-[#A3B18A]/10 text-[#344E41] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white/10 group-hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="m17 10-5 5-5-5"/></svg>
+                    </div>
+                    <span class="text-[10px] font-black uppercase tracking-widest text-[#A3B18A] mb-2 block">Expertise</span>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-white transition-colors">Élagage Acrobatique</h3>
+                    <p class="text-gray-500 group-hover:text-white/70 transition-colors leading-relaxed mb-8">
+                        Taille de structure et soin des arbres, même dans les accès les plus complexes par grimpe ou nacelle.
+                    </p>
+                    <div class="flex items-center gap-2 text-sm font-bold group-hover:text-white transition-colors cursor-pointer">
+                        Découvrir <svg class="group-hover:translate-x-2 transition-transform" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group relative bg-white border border-gray-100 p-10 rounded-[2.5rem] hover:bg-[#344E41] transition-all duration-500 shadow-sm hover:shadow-2xl">
+                    <div class="w-14 h-14 bg-[#A3B18A]/10 text-[#344E41] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white/10 group-hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 21 2c-2.5 4-3 5.5-4.1 11.2A7 7 0 0 1 11 20z"/></svg>
+                    </div>
+                    <span class="text-[10px] font-black uppercase tracking-widest text-[#A3B18A] mb-2 block">Sécurité</span>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-white transition-colors">Débroussaillage</h3>
+                    <p class="text-gray-500 group-hover:text-white/70 transition-colors leading-relaxed mb-8">
+                        Remise en état de terrains en friche et mise en conformité incendie pour protéger votre propriété.
+                    </p>
+                    <div class="flex items-center gap-2 text-sm font-bold group-hover:text-white transition-colors cursor-pointer">
+                        Découvrir <svg class="group-hover:translate-x-2 transition-transform" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group relative bg-white border border-gray-100 p-10 rounded-[2.5rem] hover:bg-[#344E41] transition-all duration-500 shadow-sm hover:shadow-2xl">
+                    <div class="w-14 h-14 bg-[#A3B18A]/10 text-[#344E41] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white/10 group-hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <span class="text-[10px] font-black uppercase tracking-widest text-[#A3B18A] mb-2 block">Technique</span>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-white transition-colors">Abattage Délicat</h3>
+                    <p class="text-gray-500 group-hover:text-white/70 transition-colors leading-relaxed mb-8">
+                        Démontage contrôlé d'arbres dangereux avec évacuation complète des rémanents et rognage de souche.
+                    </p>
+                    <div class="flex items-center gap-2 text-sm font-bold group-hover:text-white transition-colors cursor-pointer">
+                        Découvrir <svg class="group-hover:translate-x-2 transition-transform" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bento Realisations -->
+    <section id="realisations" class="py-20 bg-[#F4F5F0]">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[auto] md:h-[600px]">
+                <div class="md:col-span-2 md:row-span-2 relative rounded-[2rem] overflow-hidden group bento-item shadow-lg h-[400px] md:h-full">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800" class="w-full h-full object-cover transition-transform duration-700" alt="Nettoyage forestier">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-10 flex flex-col justify-end text-white">
+                        <h4 class="text-2xl font-bold">Nettoyage forestier</h4>
+                        <p class="opacity-70">Haute-Garonne</p>
+                    </div>
+                </div>
+                <div class="md:col-span-2 relative rounded-[2rem] overflow-hidden group bento-item shadow-lg h-[250px] md:h-full">
+                    <img src="https://images.unsplash.com/photo-1444491741275-3747c53c99b4?w=800" class="w-full h-full object-cover transition-transform duration-700" alt="Élagage hauteur">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                </div>
+                <div class="relative rounded-[2rem] overflow-hidden group bento-item shadow-lg h-[200px] md:h-full">
+                    <img src="https://images.unsplash.com/photo-1470058869958-2a77a6711758?w=500" class="w-full h-full object-cover transition-transform duration-700" alt="Matériel pro">
+                </div>
+                <div class="relative rounded-[2rem] overflow-hidden group bg-[#344E41] flex flex-col items-center justify-center text-white p-6 text-center h-[200px] md:h-full">
+                    <span class="text-4xl font-black mb-2">200+</span>
+                    <p class="text-xs font-bold uppercase tracking-widest opacity-60">Projets terminés cette année</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32">
+        <div class="container mx-auto px-6">
+            <div class="bg-[#1A2F23] rounded-[3.5rem] p-10 lg:p-20 text-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-[#A3B18A] rounded-full blur-[120px] opacity-20"></div>
+                
+                <div class="flex flex-col lg:flex-row gap-20 relative z-10">
+                    <div class="lg:w-1/2">
+                        <h2 class="text-5xl lg:text-6xl font-black mb-8 tracking-tighter">On commence <br/> quand ?</h2>
+                        <p class="text-xl text-white/60 mb-12 max-w-sm">
+                            Décrivez votre projet et recevez une estimation gratuite sous 24 heures.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-6 group cursor-pointer">
+                                <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-[#A3B18A] group-hover:text-[#1A2F23] transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-black uppercase tracking-widest text-white/40">Direct</p>
+                                    <p class="text-lg font-bold">06 00 00 00 00</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-6 group cursor-pointer">
+                                <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-[#A3B18A] group-hover:text-[#1A2F23] transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-black uppercase tracking-widest text-white/40">Email</p>
+                                    <p class="text-lg font-bold">hello@guillaumegeysse.fr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-1/2 bg-white rounded-[2.5rem] p-10 text-[#1A2F23]">
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <input type="text" placeholder="Prénom Nom" class="w-full bg-gray-50 border-none rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all">
+                                <input type="tel" placeholder="Téléphone" class="w-full bg-gray-50 border-none rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all">
+                            </div>
+                            <input type="email" placeholder="Email" class="w-full bg-gray-50 border-none rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all">
+                            <select class="w-full bg-gray-50 border-none rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all">
+                                <option>Élagage</option>
+                                <option>Débroussaillage</option>
+                                <option>Abattage</option>
+                            </select>
+                            <textarea rows="4" placeholder="Détails du projet..." class="w-full bg-gray-50 border-none rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all"></textarea>
+                            <button type="submit" class="w-full bg-[#344E41] text-white py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-[#344E41]/90 transition-all active:scale-95">
+                                Envoyer ma demande
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-10">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-[#344E41] rounded-xl flex items-center justify-center overflow-hidden">
+                        <img src="assets/logo.png" alt="Logo Guillaume Geysse" class="w-full h-full object-contain p-1">
+                    </div>
+                    <span class="font-black text-lg tracking-tighter uppercase">Guillaume Geysse</span>
+                </div>
+                
+                <div class="flex gap-10 text-sm font-bold text-gray-400">
+                    <a href="#" class="hover:text-[#344E41]">Instagram</a>
+                    <a href="#" class="hover:text-[#344E41]">Facebook</a>
+                    <a href="#" class="hover:text-[#344E41]">Linkedin</a>
+                </div>
+
+                <p class="text-xs font-bold text-gray-300 uppercase tracking-widest">
+                    © 2024 — Artisans du Végétal
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion du scroll pour la navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white/80', 'backdrop-blur-lg', 'border-b', 'border-gray-100', 'py-3');
+                navbar.classList.remove('py-6');
+            } else {
+                navbar.classList.remove('bg-white/80', 'backdrop-blur-lg', 'border-b', 'border-gray-100', 'py-3');
+                navbar.classList.add('py-6');
+            }
+        });
+
+        // Menu mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Optionnel : Changer l'icône burger en X
+            const isHidden = mobileMenu.classList.contains('hidden');
+            menuIcon.innerHTML = isHidden 
+                ? '<line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>'
+                : '<line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/>';
+        });
+
+        // Fermer le menu au clic sur un lien
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.innerHTML = '<line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>';
+            });
+        });
+    </script>
+</body>
+</html>
