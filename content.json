@@ -1,0 +1,136 @@
+{
+    "sections": [
+      {
+        "id": "hero",
+        "label": "Bannière principale",
+        "fields": [
+          {
+            "id": "badge",
+            "label": "Texte badge",
+            "type": "text",
+            "value": "Intervention certifiée & Assurée"
+          },
+          {
+            "id": "title",
+            "label": "Titre (ligne 2 en vert)",
+            "type": "text",
+            "value": "taille haute"
+          },
+          {
+            "id": "subtitle",
+            "label": "Sous-titre",
+            "type": "text",
+            "value": "Expertise technique en élagage et débroussaillage pour sublimer et sécuriser vos espaces naturels."
+          },
+          {
+            "id": "last_mission",
+            "label": "Dernière mission",
+            "type": "text",
+            "value": "Saint Maurice-Navacelles — Élagage complet"
+          },
+          {
+            "id": "photo",
+            "label": "Photo principale",
+            "type": "image",
+            "value": "elageur.png"
+          }
+        ]
+      },
+      {
+        "id": "services",
+        "label": "Services",
+        "fields": [
+          {
+            "id": "service1_title",
+            "label": "Service 1 — Titre",
+            "type": "text",
+            "value": "Élagage & Taille"
+          },
+          {
+            "id": "service1_desc",
+            "label": "Service 1 — Description",
+            "type": "text",
+            "value": "Intervention en hauteur sécurisée pour la taille raisonnée de vos arbres."
+          },
+          {
+            "id": "service2_title",
+            "label": "Service 2 — Titre",
+            "type": "text",
+            "value": "Débroussaillage"
+          },
+          {
+            "id": "service2_desc",
+            "label": "Service 2 — Description",
+            "type": "text",
+            "value": "Nettoyage complet de vos terrains pour prévenir les risques d'incendie."
+          },
+          {
+            "id": "service3_title",
+            "label": "Service 3 — Titre",
+            "type": "text",
+            "value": "Abattage"
+          },
+          {
+            "id": "service3_desc",
+            "label": "Service 3 — Description",
+            "type": "text",
+            "value": "Abattage contrôlé avec techniques de rigging pour les zones difficiles d'accès."
+          }
+        ]
+      },
+      {
+        "id": "gallery",
+        "label": "Galerie réalisations",
+        "fields": [
+          {
+            "id": "photos",
+            "label": "Photos de réalisations",
+            "type": "image-list",
+            "value": []
+          }
+        ]
+      },
+      {
+        "id": "contact",
+        "label": "Contact",
+        "fields": [
+          {
+            "id": "phone",
+            "label": "Téléphone",
+            "type": "text",
+            "value": "06 00 00 00 00"
+          },
+          {
+            "id": "email",
+            "label": "Email",
+            "type": "text",
+            "value": "hello@guillaumegeysse.fr"
+          }
+        ]
+      },
+      {
+        "id": "social",
+        "label": "Réseaux sociaux",
+        "fields": [
+          {
+            "id": "instagram",
+            "label": "Lien Instagram",
+            "type": "text",
+            "value": "#"
+          },
+          {
+            "id": "facebook",
+            "label": "Lien Facebook",
+            "type": "text",
+            "value": "#"
+          },
+          {
+            "id": "linkedin",
+            "label": "Lien LinkedIn",
+            "type": "text",
+            "value": "#"
+          }
+        ]
+      }
+    ]
+  }
