@@ -78,8 +78,9 @@
                     </div>
                 </div>
                 <div class="lg:w-1/2 relative">
-                    <div class="relative rounded-[3rem] overflow-hidden shadow-2xl rotate-2 aspect-[4/5] lg:aspect-auto lg:h-[600px]">
-                        <img id="hero-photo" src="assets/elageur.png" alt="Élagueur au travail" class="w-full h-full object-cover">
+                    <div class="relative rounded-[3rem] overflow-hidden shadow-2xl rotate-2" style="aspect-ratio: 4/5; max-height: 600px;">
+                        <img id="hero-photo" src="assets/elageur.png" alt="Élagueur au travail" 
+                            style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
                         <div class="absolute bottom-8 left-8 right-8 glass-card p-6 rounded-3xl text-white">
                             <p class="text-sm font-bold opacity-80 uppercase mb-1">Dernière mission</p>
                             <p id="hero-mission" class="text-xl font-bold"></p>
@@ -226,7 +227,14 @@
             document.getElementById("hero-subtitle").textContent = getField(fields, "subtitle")
             document.getElementById("hero-mission").textContent = getField(fields, "last_mission")
             const photo = getField(fields, "photo")
-            if (photo) document.getElementById("hero-photo").src = RAW(`assets/${photo}`)
+            if (photo) {
+            const src = RAW(`images/${photo}`)
+            const img = document.getElementById("hero-photo")
+            img.src = src
+            img.onerror = () => {
+            img.src = RAW(`assets/${photo}`)
+                }
+}
         }
 
         function applyServices(fields) {
