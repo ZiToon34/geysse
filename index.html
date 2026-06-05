@@ -243,8 +243,13 @@ const IMAGE_BASE = (filename) => `${API.replace('/github', '')}/image-proxy?owne
             document.getElementById("hero-mission").textContent = getField(fields, "last_mission")
             const photo = getField(fields, "photo")
             if (photo) {
-    document.getElementById("hero-photo").src = 
-        `https://mon-cms-mnrd.vercel.app/api/image-proxy?owner=${GITHUB_USER}&repo=${GITHUB_REPO}&path=assets/${photo}`
+    const img = document.getElementById("hero-photo")
+    // Essaie d'abord dans images/, puis assets/ si pas trouvé
+    img.src = `https://mon-cms-mnrd.vercel.app/api/image-proxy?owner=${GITHUB_USER}&repo=${GITHUB_REPO}&path=images/${photo}`
+    img.onerror = () => {
+        img.src = `https://mon-cms-mnrd.vercel.app/api/image-proxy?owner=${GITHUB_USER}&repo=${GITHUB_REPO}&path=assets/${photo}`
+        img.onerror = null
+    }
 }
         }
 
