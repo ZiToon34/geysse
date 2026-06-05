@@ -195,27 +195,42 @@
         const GITHUB_USER = "ZiToon34"
         const GITHUB_REPO = "geysse"
         const BRANCH = "main"
-        const RAW = (file) => `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${BRANCH}/${file}?t=${Date.now()}`
+        const API = "https://mon-cms-mnrd.vercel.app/api/github"
+
+async function fetchContent() {
+    const res = await fetch(API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            action: "public-read",
+            owner: GITHUB_USER,
+            repo: GITHUB_REPO,
+            path: "content.json"
+        })
+    })
+    const data = await res.json()
+    return JSON.parse(data.content)
+}
+
+const IMAGE_BASE = (filename) => `${API.replace('/github', '')}/image-proxy?owner=${GITHUB_USER}&repo=${GITHUB_REPO}&path=images/${filename}`
 
         // ==============================
         // CHARGER LE CONTENU
         // ==============================
         async function loadContent() {
-            try {
-                const res = await fetch(RAW("content.json"))
-                const data = await res.json()
-
-                data.sections.forEach(section => {
-                    if (section.id === "hero") applyHero(section.fields)
-                    if (section.id === "services") applyServices(section.fields)
-                    if (section.id === "gallery") applyGallery(section.fields)
-                    if (section.id === "contact") applyContact(section.fields)
-                    if (section.id === "social") applySocial(section.fields)
-                })
-            } catch (err) {
-                console.error("Erreur chargement content.json", err)
-            }
-        }
+    try {
+        const data = await fetchContent()
+        data.sections.forEach(section => {
+            if (section.id === "hero") applyHero(section.fields)
+            if (section.id === "services") applyServices(section.fields)
+            if (section.id === "gallery") applyGallery(section.fields)
+            if (section.id === "contact") applyContact(section.fields)
+            if (section.id === "social") applySocial(section.fields)
+        })
+    } catch (err) {
+        console.error("Erreur chargement content.json", err)
+    }
+}
 
         function getField(fields, id) {
             return fields.find(f => f.id === id)?.value || ""
@@ -228,12 +243,8 @@
             document.getElementById("hero-mission").textContent = getField(fields, "last_mission")
             const photo = getField(fields, "photo")
             if (photo) {
-            const src = RAW(`images/${photo}`)
-            const img = document.getElementById("hero-photo")
-            img.src = src
-            img.onerror = () => {
-            img.src = RAW(`assets/${photo}`)
-                }
+    document.getElementById("hero-photo").src = 
+        `https://mon-cms-mnrd.vercel.app/api/image-proxy?owner=${GITHUB_USER}&repo=${GITHUB_REPO}&path=assets/${photo}`
 }
         }
 
@@ -255,17 +266,18 @@
         }
 
         function applyGallery(fields) {
-            const photos = fields.find(f => f.id === "photos")?.value || []
-            const grid = document.getElementById("gallery-grid")
-            if (photos.length === 0) {
-                grid.innerHTML = `<p class="text-gray-400 col-span-full text-center py-10">Aucune photo pour le moment.</p>`
-                return
-            }
-            grid.innerHTML = photos.map(photo => `
-                <div class="bento-item rounded-2xl overflow-hidden aspect-square">
-                    <img src="${RAW(`images/${photo}`)}" alt="Réalisation" class="w-full h-full object-cover transition-transform duration-500">
-                </div>`).join("")
-        }
+    const photos = fields.find(f => f.id === "photos")?.value || []
+    const grid = document.getElementById("gallery-grid")
+    if (photos.length === 0) {
+        grid.innerHTML = `<p class="text-gray-400 col-span-full text-center py-10">Aucune photo pour le moment.</p>`
+        return
+    }
+    grid.innerHTML = photos.map(photo => `
+        <div class="bento-item rounded-2xl overflow-hidden aspect-square">
+            <img src="https://mon-cms-mnrd.vercel.app/api/image-proxy?owner=${GITHUB_USER}&repo=${GITHUB_REPO}&path=images/${photo}" 
+                alt="Réalisation" class="w-full h-full object-cover transition-transform duration-500">
+        </div>`).join("")
+}
 
         function applyContact(fields) {
             const phone = getField(fields, "phone")
