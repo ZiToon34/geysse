@@ -8,7 +8,7 @@
           "id": "badge",
           "label": "Texte badge",
           "type": "text",
-          "value": "Intervention certifiée & Assurée"
+          "value": "Intervention certifiée & Assurée mon poulet"
         },
         {
           "id": "title",
@@ -32,7 +32,7 @@
           "id": "photo",
           "label": "Photo principale",
           "type": "image",
-          "value": "Gemini_Generated_Image_rikd37rikd37rikd.png"
+          "value": "IMG_6713.jpeg"
         }
       ]
     },
@@ -88,7 +88,14 @@
           "type": "image-list",
           "value": [
             "background.png",
-            "images.jpg"
+            "images.jpg",
+            "EnemySprite.png",
+            "HeroSprite.png",
+            "unnamed (1).jpg",
+            "Gemini_Generated_Image_mzky2cmzk.png",
+            "IMG_6681.jpeg",
+            "IMG_6725.jpeg",
+            "image_1780525547282.jpg"
           ]
         }
       ]
