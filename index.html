@@ -44,6 +44,7 @@
             <div class="hidden lg:flex items-center gap-10">
                 <a href="#services" class="text-sm font-bold uppercase tracking-wider hover:text-[#A3B18A] transition-colors">Services</a>
                 <a href="#certification" class="text-sm font-bold uppercase tracking-wider hover:text-[#A3B18A] transition-colors">Certification</a>
+                <a href="#secteur" class="text-sm font-bold uppercase tracking-wider hover:text-[#A3B18A] transition-colors">Secteur</a>
                 <a href="#realisations" class="text-sm font-bold uppercase tracking-wider hover:text-[#A3B18A] transition-colors">Réalisations</a>
                 <a href="#contact" class="text-sm font-bold uppercase tracking-wider hover:text-[#A3B18A] transition-colors">Contact</a>
                 <a id="nav-phone" href="tel:0600000000" class="bg-[#344E41] text-white px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest hover:scale-105 transition-transform shadow-xl flex items-center gap-2">
@@ -58,6 +59,7 @@
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 p-8 flex flex-col gap-6 lg:hidden">
             <a href="#services" class="text-xl font-bold">Services</a>
             <a href="#certification" class="text-xl font-bold">Certification</a>
+            <a href="#secteur" class="text-xl font-bold">Secteur</a>
             <a href="#realisations" class="text-xl font-bold">Réalisations</a>
             <a href="#contact" class="text-xl font-bold">Contact</a>
             <a id="mobile-phone" href="tel:0600000000" class="bg-[#344E41] text-white p-5 rounded-2xl text-center font-bold">Appeler maintenant</a>
@@ -161,6 +163,64 @@
                         <h3 class="text-2xl font-black mb-3">Documents vérifiés</h3>
                         <p class="text-white/70 leading-relaxed">Emplacement final pour assurance, attestations, formations et justificatifs à publier après validation.</p>
                     </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secteur d'activité -->
+    <section id="secteur" class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 items-stretch">
+                <div class="flex flex-col justify-between gap-10">
+                    <div>
+                        <p class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">Zone d'intervention</p>
+                        <h2 class="text-4xl lg:text-5xl font-black mb-6 tracking-tighter">Secteur d'activité</h2>
+                        <p class="text-gray-500 font-medium leading-relaxed">Interventions autour de La Vacquerie-et-Saint-Martin-de-Castries et des communes voisines. Le périmètre ci-dessous est indicatif et sera ajusté avec la zone exacte de déplacement.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="rounded-2xl border border-gray-100 p-5">
+                            <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Point central</p>
+                            <p class="font-black">Mas de Figuières</p>
+                            <p class="text-sm text-gray-500 mt-1">34520 La Vacquerie-et-Saint-Martin-de-Castries</p>
+                        </div>
+                        <div class="rounded-2xl border border-gray-100 p-5">
+                            <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Rayon indicatif</p>
+                            <p class="font-black">À définir</p>
+                            <p class="text-sm text-gray-500 mt-1">Carte et limites à compléter avec le secteur réel.</p>
+                        </div>
+                    </div>
+
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm font-bold text-[#344E41]">
+                        <li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">La Vacquerie</li>
+                        <li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">Lodève</li>
+                        <li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">Ganges</li>
+                        <li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">Saint-Guilhem-le-Désert</li>
+                    </ul>
+                </div>
+
+                <div class="relative min-h-[420px] rounded-[2rem] overflow-hidden border border-gray-100 bg-[#EDF2E8] shadow-sm">
+                    <div id="map-consent" class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center p-8 bg-[#1A2F23] text-white">
+                        <p class="text-xs font-black uppercase tracking-[0.2em] text-[#A3B18A] mb-4">Google Maps</p>
+                        <h3 class="text-3xl font-black tracking-tighter mb-4">Afficher la carte du secteur</h3>
+                        <p class="text-white/70 max-w-md leading-relaxed mb-8">La carte est fournie par Google Maps. Elle peut transmettre des données à Google uniquement après activation.</p>
+                        <button id="load-map" type="button" class="bg-white text-[#1A2F23] px-8 py-4 rounded-full text-xs font-black uppercase tracking-widest hover:scale-105 transition-transform">
+                            Afficher la carte
+                        </button>
+                    </div>
+                    <iframe
+                        id="sector-map"
+                        title="Carte du secteur d'intervention"
+                        class="w-full h-full min-h-[420px] border-0"
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        data-src="https://www.google.com/maps?q=Mas%20de%20Figui%C3%A8res%2034520%20La%20Vacquerie-et-Saint-Martin-de-Castries&z=10&output=embed">
+                    </iframe>
+                    <div class="pointer-events-none absolute left-6 bottom-6 right-6 rounded-2xl bg-white/90 backdrop-blur p-4 shadow-lg">
+                        <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Délimitation provisoire</p>
+                        <p class="text-sm font-bold text-[#1A2F23]">Zone à préciser : remplacer cette carte par une Google My Maps si vous souhaitez afficher une vraie frontière tracée.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -383,6 +443,16 @@
         }
 
         loadContent()
+
+        const loadMapButton = document.getElementById("load-map")
+        const mapConsent = document.getElementById("map-consent")
+        const sectorMap = document.getElementById("sector-map")
+        loadMapButton?.addEventListener("click", () => {
+            if (!sectorMap.src) {
+                sectorMap.src = sectorMap.dataset.src
+            }
+            mapConsent.hidden = true
+        })
 
         document.getElementById("contact-form").addEventListener("submit", (event) => {
             event.preventDefault()
