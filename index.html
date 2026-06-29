@@ -120,14 +120,14 @@
     <section id="certification" class="py-32 bg-[#EDF2E8] overflow-hidden">
         <div class="container mx-auto px-6">
             <div class="mb-20 max-w-3xl">
-                <p class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">À compléter</p>
-                <h2 class="text-4xl lg:text-5xl font-black mb-4 tracking-tighter">Certification</h2>
-                <p class="text-gray-500 font-medium leading-relaxed">Arbre de talent provisoire à remplacer par les certifications, formations, assurances et qualifications réellement détenues.</p>
+                <p id="certification-eyebrow" class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">À compléter</p>
+                <h2 id="certification-title" class="text-4xl lg:text-5xl font-black mb-4 tracking-tighter">Certification</h2>
+                <p id="certification-intro" class="text-gray-500 font-medium leading-relaxed">Arbre de talent provisoire à remplacer par les certifications, formations, assurances et qualifications réellement détenues.</p>
             </div>
 
             <div class="relative max-w-5xl mx-auto">
                 <div class="hidden lg:block absolute left-1/2 top-10 bottom-10 w-px bg-[#A3B18A]"></div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div id="certification-tree" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <article class="relative bg-white border border-[#DADFD2] rounded-3xl p-8 shadow-sm">
                         <span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#344E41] text-white font-black mb-6">01</span>
                         <h3 class="text-2xl font-black mb-3">Sécurité chantier</h3>
@@ -174,25 +174,25 @@
             <div class="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 items-stretch">
                 <div class="flex flex-col justify-between gap-10">
                     <div>
-                        <p class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">Zone d'intervention</p>
-                        <h2 class="text-4xl lg:text-5xl font-black mb-6 tracking-tighter">Secteur d'activité</h2>
-                        <p class="text-gray-500 font-medium leading-relaxed">Interventions autour de La Vacquerie-et-Saint-Martin-de-Castries et des communes voisines. Le périmètre ci-dessous est indicatif et sera ajusté avec la zone exacte de déplacement.</p>
+                        <p id="sector-eyebrow" class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">Zone d'intervention</p>
+                        <h2 id="sector-title" class="text-4xl lg:text-5xl font-black mb-6 tracking-tighter">Secteur d'activité</h2>
+                        <p id="sector-intro" class="text-gray-500 font-medium leading-relaxed">Interventions autour de La Vacquerie-et-Saint-Martin-de-Castries et des communes voisines. Le périmètre ci-dessous est indicatif et sera ajusté avec la zone exacte de déplacement.</p>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="rounded-2xl border border-gray-100 p-5">
                             <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Point central</p>
-                            <p class="font-black">Mas de Figuières</p>
-                            <p class="text-sm text-gray-500 mt-1">34520 La Vacquerie-et-Saint-Martin-de-Castries</p>
+                            <p id="sector-center-name" class="font-black">Mas de Figuières</p>
+                            <p id="sector-center-address" class="text-sm text-gray-500 mt-1">34520 La Vacquerie-et-Saint-Martin-de-Castries</p>
                         </div>
                         <div class="rounded-2xl border border-gray-100 p-5">
                             <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Rayon indicatif</p>
-                            <p class="font-black">À définir</p>
-                            <p class="text-sm text-gray-500 mt-1">Carte et limites à compléter avec le secteur réel.</p>
+                            <p id="sector-radius" class="font-black">À définir</p>
+                            <p id="sector-radius-note" class="text-sm text-gray-500 mt-1">Carte et limites à compléter avec le secteur réel.</p>
                         </div>
                     </div>
 
-                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm font-bold text-[#344E41]">
+                    <ul id="sector-cities" class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm font-bold text-[#344E41]">
                         <li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">La Vacquerie</li>
                         <li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">Lodève</li>
                         <li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">Ganges</li>
@@ -203,8 +203,8 @@
                 <div class="relative min-h-[420px] rounded-[2rem] overflow-hidden border border-gray-100 bg-[#EDF2E8] shadow-sm">
                     <div id="map-consent" class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center p-8 bg-[#1A2F23] text-white">
                         <p class="text-xs font-black uppercase tracking-[0.2em] text-[#A3B18A] mb-4">Google Maps</p>
-                        <h3 class="text-3xl font-black tracking-tighter mb-4">Afficher la carte du secteur</h3>
-                        <p class="text-white/70 max-w-md leading-relaxed mb-8">La carte est fournie par Google Maps. Elle peut transmettre des données à Google uniquement après activation.</p>
+                        <h3 id="map-consent-title" class="text-3xl font-black tracking-tighter mb-4">Afficher la carte du secteur</h3>
+                        <p id="map-consent-text" class="text-white/70 max-w-md leading-relaxed mb-8">La carte est fournie par Google Maps. Elle peut transmettre des données à Google uniquement après activation.</p>
                         <button id="load-map" type="button" class="bg-white text-[#1A2F23] px-8 py-4 rounded-full text-xs font-black uppercase tracking-widest hover:scale-105 transition-transform">
                             Afficher la carte
                         </button>
@@ -219,7 +219,7 @@
                     </iframe>
                     <div class="pointer-events-none absolute left-6 bottom-6 right-6 rounded-2xl bg-white/90 backdrop-blur p-4 shadow-lg">
                         <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Délimitation provisoire</p>
-                        <p class="text-sm font-bold text-[#1A2F23]">Zone à préciser : remplacer cette carte par une Google My Maps si vous souhaitez afficher une vraie frontière tracée.</p>
+                        <p id="sector-map-note" class="text-sm font-bold text-[#1A2F23]">Zone à préciser : remplacer cette carte par une Google My Maps si vous souhaitez afficher une vraie frontière tracée.</p>
                     </div>
                 </div>
             </div>
@@ -333,12 +333,15 @@
     </footer>
 
     <script>
-        const CONTENT_PATH = "content.json"
-        const IMAGE_BASE = (filename) => `images/${encodeURIComponent(filename)}`
+        const GITHUB_USER = "ZiToon34"
+        const GITHUB_REPO = "geysse"
+        const BRANCH = "main"
+        const RAW = (path) => `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${BRANCH}/${path}?t=${Date.now()}`
+        const IMAGE_BASE = (filename) => RAW(`images/${encodeURIComponent(filename)}`)
 
         async function fetchContent() {
-            const res = await fetch(CONTENT_PATH, { cache: "no-store" })
-            if (!res.ok) throw new Error(`Impossible de charger ${CONTENT_PATH}`)
+            const res = await fetch(RAW("content.json"), { cache: "no-store" })
+            if (!res.ok) throw new Error("Impossible de charger content.json depuis GitHub")
             return res.json()
         }
 
@@ -361,6 +364,8 @@
         data.sections.forEach(section => {
             if (section.id === "hero") applyHero(section.fields)
             if (section.id === "services") applyServices(section.fields)
+            if (section.id === "certification") applyCertification(section.fields)
+            if (section.id === "sector") applySector(section.fields)
             if (section.id === "gallery") applyGallery(section.fields)
             if (section.id === "contact") applyContact(section.fields)
             if (section.id === "social") applySocial(section.fields)
@@ -400,6 +405,84 @@
                         <p class="text-gray-400 leading-relaxed group-hover:text-white/70 transition-colors">${escapeHTML(desc)}</p>
                     </div>`
             }
+        }
+
+        function applyCertification(fields) {
+            setText("certification-eyebrow", getField(fields, "eyebrow") || "À compléter")
+            setText("certification-title", getField(fields, "title") || "Certification")
+            setText("certification-intro", getField(fields, "intro") || "Arbre de talent provisoire à remplacer par les certifications, formations, assurances et qualifications réellement détenues.")
+
+            const grid = document.getElementById("certification-tree")
+            const styles = [
+                "bg-[#344E41] text-white",
+                "bg-[#588157] text-white",
+                "bg-[#588157] text-white",
+                "bg-[#A3B18A] text-[#1A2F23]",
+                "bg-[#A3B18A] text-[#1A2F23]",
+                "bg-white text-[#344E41]"
+            ]
+
+            grid.innerHTML = ""
+            for (let i = 1; i <= 6; i++) {
+                const title = getField(fields, `talent${i}_title`)
+                const desc = getField(fields, `talent${i}_desc`)
+                if (!title && !desc) continue
+
+                const isLast = i === 6
+                grid.innerHTML += `
+                    <article class="relative ${isLast ? "bg-[#344E41] text-white shadow-xl" : "bg-white border border-[#DADFD2] shadow-sm"} rounded-3xl p-8 ${i % 2 === 0 ? "lg:mt-16" : ""}">
+                        <span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl ${styles[i - 1]} font-black mb-6">${String(i).padStart(2, "0")}</span>
+                        <h3 class="text-2xl font-black mb-3">${escapeHTML(title)}</h3>
+                        <p class="${isLast ? "text-white/70" : "text-gray-500"} leading-relaxed">${escapeHTML(desc)}</p>
+                    </article>`
+            }
+        }
+
+        function applySector(fields) {
+            setText("sector-eyebrow", getField(fields, "eyebrow") || "Zone d'intervention")
+            setText("sector-title", getField(fields, "title") || "Secteur d'activité")
+            setText("sector-intro", getField(fields, "intro") || "Interventions autour de La Vacquerie-et-Saint-Martin-de-Castries et des communes voisines.")
+            setText("sector-center-name", getField(fields, "center_name") || "Mas de Figuières")
+            setText("sector-center-address", getField(fields, "center_address") || "34520 La Vacquerie-et-Saint-Martin-de-Castries")
+            setText("sector-radius", getField(fields, "radius") || "À définir")
+            setText("sector-radius-note", getField(fields, "radius_note") || "Carte et limites à compléter avec le secteur réel.")
+            setText("map-consent-title", getField(fields, "map_consent_title") || "Afficher la carte du secteur")
+            setText("map-consent-text", getField(fields, "map_consent_text") || "La carte est fournie par Google Maps. Elle peut transmettre des données à Google uniquement après activation.")
+            setText("sector-map-note", getField(fields, "map_note") || "Zone à préciser : remplacer cette carte par une Google My Maps si vous souhaitez afficher une vraie frontière tracée.")
+
+            const cityList = document.getElementById("sector-cities")
+            cityList.innerHTML = ""
+            for (let i = 1; i <= 6; i++) {
+                const city = getField(fields, `city${i}`)
+                if (!city) continue
+                cityList.innerHTML += `<li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">${escapeHTML(city)}</li>`
+            }
+
+            const map = document.getElementById("sector-map")
+            const query = getField(fields, "map_query") || `${getField(fields, "center_name")} ${getField(fields, "center_address")}`.trim()
+            const zoom = getField(fields, "map_zoom") || "10"
+            const embedUrl = getField(fields, "map_embed_url")
+            map.dataset.src = buildGoogleMapSrc(embedUrl, query, zoom)
+        }
+
+        function setText(id, value) {
+            const element = document.getElementById(id)
+            if (element) element.textContent = value
+        }
+
+        function buildGoogleMapSrc(embedUrl, query, zoom) {
+            if (embedUrl) {
+                try {
+                    const url = new URL(embedUrl)
+                    if (url.protocol === "https:" && url.hostname === "www.google.com" && url.pathname.startsWith("/maps")) {
+                        return url.toString()
+                    }
+                } catch (err) {
+                    console.warn("URL Google Maps ignorée", err)
+                }
+            }
+            const safeZoom = Number.isFinite(Number(zoom)) ? Math.min(Math.max(Number(zoom), 3), 16) : 10
+            return `https://www.google.com/maps?q=${encodeURIComponent(query || "La Vacquerie-et-Saint-Martin-de-Castries")}&z=${safeZoom}&output=embed`
         }
 
         function applyGallery(fields) {
