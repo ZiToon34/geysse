@@ -79,6 +79,222 @@
       ]
     },
     {
+      "id": "certification",
+      "label": "Certifications & Qualifications",
+      "fields": [
+        {
+          "id": "eyebrow",
+          "label": "Texte au-dessus du titre",
+          "type": "text",
+          "value": "Formation & expertise"
+        },
+        {
+          "id": "title",
+          "label": "Titre de section",
+          "type": "text",
+          "value": "Certifications"
+        },
+        {
+          "id": "intro",
+          "label": "Texte d'introduction",
+          "type": "text",
+          "value": "Des compétences vérifiées pour des interventions sûres et respectueuses du végétal."
+        },
+        {
+          "id": "talent1_title",
+          "label": "Compétence 1 — Titre",
+          "type": "text",
+          "value": "Sécurité chantier"
+        },
+        {
+          "id": "talent1_desc",
+          "label": "Compétence 1 — Description",
+          "type": "text",
+          "value": "EPI adaptés, balisage de zone et protocoles de sécurité appliqués sur chaque intervention."
+        },
+        {
+          "id": "talent2_title",
+          "label": "Compétence 2 — Titre",
+          "type": "text",
+          "value": "Grimpe et accès"
+        },
+        {
+          "id": "talent2_desc",
+          "label": "Compétence 2 — Description",
+          "type": "text",
+          "value": "Techniques de grimpe sur corde pour intervenir dans des zones difficiles d'accès en toute sécurité."
+        },
+        {
+          "id": "talent3_title",
+          "label": "Compétence 3 — Titre",
+          "type": "text",
+          "value": "Biologie de l'arbre"
+        },
+        {
+          "id": "talent3_desc",
+          "label": "Compétence 3 — Description",
+          "type": "text",
+          "value": "Taille raisonnée respectant la biologie et la saisonnalité pour préserver la vitalité de l'arbre."
+        },
+        {
+          "id": "talent4_title",
+          "label": "Compétence 4 — Titre",
+          "type": "text",
+          "value": "Abattage contrôlé"
+        },
+        {
+          "id": "talent4_desc",
+          "label": "Compétence 4 — Description",
+          "type": "text",
+          "value": "Techniques de rigging et de démontage pour un abattage maîtrisé même en zones contraintes."
+        },
+        {
+          "id": "talent5_title",
+          "label": "Compétence 5 — Titre",
+          "type": "text",
+          "value": "Débroussaillage"
+        },
+        {
+          "id": "talent5_desc",
+          "label": "Compétence 5 — Description",
+          "type": "text",
+          "value": "Prévention incendie, gestion des végétaux et nettoyage complet de parcelles."
+        },
+        {
+          "id": "talent6_title",
+          "label": "Compétence 6 — Titre",
+          "type": "text",
+          "value": "Documents vérifiés"
+        },
+        {
+          "id": "talent6_desc",
+          "label": "Compétence 6 — Description",
+          "type": "text",
+          "value": "Assurance responsabilité civile professionnelle et qualifications à jour pour chaque chantier."
+        }
+      ]
+    },
+    {
+      "id": "sector",
+      "label": "Secteur d'activité",
+      "fields": [
+        {
+          "id": "eyebrow",
+          "label": "Texte au-dessus du titre",
+          "type": "text",
+          "value": "Zone d'intervention"
+        },
+        {
+          "id": "title",
+          "label": "Titre de section",
+          "type": "text",
+          "value": "Secteur d'activité"
+        },
+        {
+          "id": "intro",
+          "label": "Description de la zone",
+          "type": "text",
+          "value": "Interventions autour de La Vacquerie-et-Saint-Martin-de-Castries et des communes voisines du Larzac et des Cévennes."
+        },
+        {
+          "id": "center_name",
+          "label": "Nom du point central",
+          "type": "text",
+          "value": "Mas de Figuières"
+        },
+        {
+          "id": "center_address",
+          "label": "Adresse du point central",
+          "type": "text",
+          "value": "34520 La Vacquerie-et-Saint-Martin-de-Castries"
+        },
+        {
+          "id": "radius",
+          "label": "Rayon d'intervention",
+          "type": "text",
+          "value": "~50 km"
+        },
+        {
+          "id": "radius_note",
+          "label": "Note sur le rayon",
+          "type": "text",
+          "value": "Déplacement possible au-delà selon la nature du chantier."
+        },
+        {
+          "id": "city1",
+          "label": "Commune 1",
+          "type": "text",
+          "value": "La Vacquerie"
+        },
+        {
+          "id": "city2",
+          "label": "Commune 2",
+          "type": "text",
+          "value": "Lodève"
+        },
+        {
+          "id": "city3",
+          "label": "Commune 3",
+          "type": "text",
+          "value": "Ganges"
+        },
+        {
+          "id": "city4",
+          "label": "Commune 4",
+          "type": "text",
+          "value": "Saint-Guilhem-le-Désert"
+        },
+        {
+          "id": "city5",
+          "label": "Commune 5",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "id": "city6",
+          "label": "Commune 6",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "id": "map_consent_title",
+          "label": "Titre de la demande de consentement carte",
+          "type": "text",
+          "value": "Afficher la carte du secteur"
+        },
+        {
+          "id": "map_consent_text",
+          "label": "Texte de la demande de consentement carte",
+          "type": "text",
+          "value": "La carte est fournie par Google Maps. Elle peut transmettre des données à Google uniquement après activation."
+        },
+        {
+          "id": "map_note",
+          "label": "Note sous la carte",
+          "type": "text",
+          "value": "Périmètre indicatif. Contactez-nous pour vérifier votre secteur."
+        },
+        {
+          "id": "map_query",
+          "label": "Requête Google Maps (si pas d'embed URL)",
+          "type": "text",
+          "value": "La Vacquerie-et-Saint-Martin-de-Castries 34520"
+        },
+        {
+          "id": "map_zoom",
+          "label": "Niveau de zoom carte (3–16)",
+          "type": "text",
+          "value": "10"
+        },
+        {
+          "id": "map_embed_url",
+          "label": "URL embed Google Maps (optionnel, prioritaire)",
+          "type": "text",
+          "value": ""
+        }
+      ]
+    },
+    {
       "id": "gallery",
       "label": "Galerie réalisations",
       "fields": [
