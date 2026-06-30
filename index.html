@@ -333,15 +333,12 @@
     </footer>
 
     <script>
-        const GITHUB_USER = "ZiToon34"
-        const GITHUB_REPO = "geysse"
-        const BRANCH = "main"
-        const RAW = (path) => `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${BRANCH}/${path}?t=${Date.now()}`
-        const IMAGE_BASE = (filename) => RAW(`images/${encodeURIComponent(filename)}`)
+        const ASSET = (path) => `${path}?t=${Date.now()}`
+        const IMAGE_BASE = (filename) => ASSET(`images/${encodeURIComponent(filename)}`)
 
         async function fetchContent() {
-            const res = await fetch(RAW("content.json"), { cache: "no-store" })
-            if (!res.ok) throw new Error("Impossible de charger content.json depuis GitHub")
+            const res = await fetch(ASSET("content.json"), { cache: "no-store" })
+            if (!res.ok) throw new Error("Impossible de charger content.json")
             return res.json()
         }
 
