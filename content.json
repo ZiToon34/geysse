@@ -290,7 +290,7 @@
           "id": "map_embed_url",
           "label": "URL embed Google Maps (optionnel, prioritaire)",
           "type": "text",
-          "value": ""
+          "value": "https://www.google.com/maps/d/u/0/embed?mid=1nW6pWMXZTduw86p81OcHvmWrDe502Kk&ehbc=2E312F&noprof=1"
         }
       ]
     },
