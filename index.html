@@ -201,21 +201,12 @@
                 </div>
 
                 <div class="relative min-h-[420px] rounded-[2rem] overflow-hidden border border-gray-100 bg-[#EDF2E8] shadow-sm">
-                    <div id="map-consent" class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center p-8 bg-[#1A2F23] text-white">
-                        <p class="text-xs font-black uppercase tracking-[0.2em] text-[#A3B18A] mb-4">Google Maps</p>
-                        <h3 id="map-consent-title" class="text-3xl font-black tracking-tighter mb-4">Afficher la carte du secteur</h3>
-                        <p id="map-consent-text" class="text-white/70 max-w-md leading-relaxed mb-8">La carte est fournie par Google Maps. Elle peut transmettre des données à Google uniquement après activation.</p>
-                        <button id="load-map" type="button" class="bg-white text-[#1A2F23] px-8 py-4 rounded-full text-xs font-black uppercase tracking-widest hover:scale-105 transition-transform">
-                            Afficher la carte
-                        </button>
-                    </div>
                     <iframe
                         id="sector-map"
                         title="Carte du secteur d'intervention"
                         class="w-full h-full min-h-[420px] border-0"
                         loading="lazy"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        data-src="https://www.google.com/maps?q=Mas%20de%20Figui%C3%A8res%2034520%20La%20Vacquerie-et-Saint-Martin-de-Castries&z=10&output=embed">
+                        referrerpolicy="strict-origin-when-cross-origin">
                     </iframe>
                     <div class="pointer-events-none absolute left-6 bottom-6 right-6 rounded-2xl bg-white/90 backdrop-blur p-4 shadow-lg">
                         <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Délimitation provisoire</p>
@@ -443,8 +434,6 @@
             setText("sector-center-address", getField(fields, "center_address") || "34520 La Vacquerie-et-Saint-Martin-de-Castries")
             setText("sector-radius", getField(fields, "radius") || "À définir")
             setText("sector-radius-note", getField(fields, "radius_note") || "Carte et limites à compléter avec le secteur réel.")
-            setText("map-consent-title", getField(fields, "map_consent_title") || "Afficher la carte du secteur")
-            setText("map-consent-text", getField(fields, "map_consent_text") || "La carte est fournie par Google Maps. Elle peut transmettre des données à Google uniquement après activation.")
             setText("sector-map-note", getField(fields, "map_note") || "Zone à préciser : remplacer cette carte par une Google My Maps si vous souhaitez afficher une vraie frontière tracée.")
 
             const cityList = document.getElementById("sector-cities")
@@ -459,7 +448,7 @@
             const query = getField(fields, "map_query") || `${getField(fields, "center_name")} ${getField(fields, "center_address")}`.trim()
             const zoom = getField(fields, "map_zoom") || "10"
             const embedUrl = getField(fields, "map_embed_url")
-            map.dataset.src = buildGoogleMapSrc(embedUrl, query, zoom)
+            map.src = buildGoogleMapSrc(embedUrl, query, zoom)
         }
 
         function setText(id, value) {
@@ -523,16 +512,6 @@
         }
 
         loadContent()
-
-        const loadMapButton = document.getElementById("load-map")
-        const mapConsent = document.getElementById("map-consent")
-        const sectorMap = document.getElementById("sector-map")
-        loadMapButton?.addEventListener("click", () => {
-            if (!sectorMap.src) {
-                sectorMap.src = sectorMap.dataset.src
-            }
-            mapConsent.hidden = true
-        })
 
         document.getElementById("contact-form").addEventListener("submit", (event) => {
             event.preventDefault()
