@@ -14,7 +14,7 @@
           "id": "title",
           "label": "Titre (ligne 2 en vert)",
           "type": "text",
-          "value": "taille hauteeeeeeeeeeeeeeeee"
+          "value": "taille haute"
         },
         {
           "id": "subtitle",
@@ -32,7 +32,7 @@
           "id": "photo",
           "label": "Photo principale",
           "type": "image",
-          "value": "elageur.jpg"
+          "value": "560460957_122154674900839679_870784505987278401_n.jpg"
         }
       ]
     },
@@ -303,7 +303,11 @@
           "label": "Photos de réalisations",
           "type": "image-list",
           "value": [
-            "WhatsApp Image 2026-06-19 at 15.33.01.jpg"
+            "560460957_122154674900839679_870784505987278401_n.jpg",
+            "625543055_122180658884839679_3958453432057004025_n.jpg",
+            "631290472_122181384848839679_8138035740000800874_n.jpg",
+            "652901870_122186436188839679_8440892397307877320_n.jpg",
+            "729437710_122200663988839679_1940932716784316578_n.jpg"
           ]
         }
       ]
