@@ -14,7 +14,7 @@
           "id": "title",
           "label": "Titre (ligne 2 en vert)",
           "type": "text",
-          "value": "taille haute"
+          "value": "taille hautee"
         },
         {
           "id": "subtitle",
