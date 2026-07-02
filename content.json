@@ -14,7 +14,7 @@
           "id": "title",
           "label": "Titre (ligne 2 en vert)",
           "type": "text",
-          "value": "taille pour tous les budgets"
+          "value": "taille pour  tous  les  budgets"
         },
         {
           "id": "subtitle",
