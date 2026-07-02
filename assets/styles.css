@@ -1683,8 +1683,8 @@ video {
   bottom: 20px; /* Distance du bas */
   right: 20px;  /* Distance de la droite */
   z-index: 1000; /* Assure que le bouton reste au-dessus des autres éléments */
-  width: 60px;   /* Taille de l'icône */
-  height: 60px;
+  width: 120px;   /* Taille de l'icône */
+  height: 120px;
   background-color: #25d366; /* Couleur verte WhatsApp */
   border-radius: 50%; /* Rend le bouton rond */
   display: flex;
@@ -1695,8 +1695,8 @@ video {
 }
 
 .whatsapp-float img {
-  width: 35px; /* Taille de l'image à l'intérieur */
-  height: 35px;
+  width: 70px; /* Taille de l'image à l'intérieur */
+  height: 70px;
 }
 
 .whatsapp-float:hover {
