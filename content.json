@@ -14,13 +14,13 @@
           "id": "title",
           "label": "Titre (ligne 2 en vert)",
           "type": "text",
-          "value": "taille hautee"
+          "value": "taille pour tous les budgets"
         },
         {
           "id": "subtitle",
           "label": "Sous-titre",
           "type": "text",
-          "value": "Expertise technique en élagage et débroussaillage pour sublimer et sécuriser vos espaces naturels."
+          "value": "Expertise technique en élagage et débroussaillage pour sublimer et sécuriser vos espaces naturels (Au sol ou sur corde)."
         },
         {
           "id": "last_mission",
@@ -44,25 +44,25 @@
           "id": "service1_title",
           "label": "Service 1 — Titre",
           "type": "text",
-          "value": "Élagage et chips"
+          "value": "Débroussaillage"
         },
         {
           "id": "service1_desc",
           "label": "Service 1 — Description",
           "type": "text",
-          "value": "Intervention en hauteur sécurisée pour la taille raisonnée de vos arbres."
+          "value": "Nettoyage complet de vos terrains quels que soient leurs tailles, implantation ou inclinaison"
         },
         {
           "id": "service2_title",
           "label": "Service 2 — Titre",
           "type": "text",
-          "value": "Débroussaillage"
+          "value": "Élagage"
         },
         {
           "id": "service2_desc",
           "label": "Service 2 — Description",
           "type": "text",
-          "value": "Nettoyage complet de vos terrains pour prévenir les risques d'incendie."
+          "value": "Intervention en hauteur sur corde sécurisée pour la taille raisonnée de vos arbres."
         },
         {
           "id": "service3_title",
@@ -194,13 +194,13 @@
           "id": "intro",
           "label": "Description de la zone",
           "type": "text",
-          "value": "Interventions autour de La Vacquerie-et-Saint-Martin-de-Castries et des communes voisines du Larzac et des Cévennes."
+          "value": "Interventions autour de Lodève et des communes voisines du Larzac et des Cévennes."
         },
         {
           "id": "center_name",
           "label": "Nom du point central",
           "type": "text",
-          "value": "Mas de Figuières"
+          "value": "Larzac"
         },
         {
           "id": "center_address",
@@ -224,25 +224,25 @@
           "id": "city1",
           "label": "Commune 1",
           "type": "text",
-          "value": "La Vacquerie"
+          "value": "Hérault"
         },
         {
           "id": "city2",
           "label": "Commune 2",
           "type": "text",
-          "value": "Lodève"
+          "value": "Aveyron"
         },
         {
           "id": "city3",
           "label": "Commune 3",
           "type": "text",
-          "value": "Ganges"
+          "value": "Gard"
         },
         {
           "id": "city4",
           "label": "Commune 4",
           "type": "text",
-          "value": "Saint-Guilhem-le-Désert"
+          "value": "Lozère"
         },
         {
           "id": "city5",
