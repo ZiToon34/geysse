@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.guillaumegeysse.fr/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.guillaumegeysse.fr/elagage.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.guillaumegeysse.fr/debroussaillage.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.guillaumegeysse.fr/abattage.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.guillaumegeysse.fr/mentions-legales.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.guillaumegeysse.fr/politique-confidentialite.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.guillaumegeysse.fr/cookies.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.guillaumegeysse.fr/conditions-generales.html</loc>
+    <priority>0.3</priority>
+  </url>
+</urlset>

@@ -8,19 +8,19 @@
           "id": "badge",
           "label": "Texte badge",
           "type": "text",
-          "value": "Intervention soignée & sécurisée"
+          "value": "Élagueur-grimpeur — Larzac & Cévennes"
         },
         {
           "id": "title",
           "label": "Titre (ligne 2 en vert)",
           "type": "text",
-          "value": "taille  pour  tous  les  budgets"
+          "value": "taille raisonnée"
         },
         {
           "id": "subtitle",
           "label": "Sous-titre",
           "type": "text",
-          "value": "Expertise technique en élagage et débroussaillage pour sublimer et sécuriser vos espaces naturels (Au sol ou sur corde)."
+          "value": "Élagage, débroussaillage et abattage contrôlé, au sol ou sur corde. Des interventions soignées, sécurisées et accessibles à tous les budgets, autour de Lodève, du Larzac et des Cévennes."
         },
         {
           "id": "last_mission",
@@ -50,7 +50,7 @@
           "id": "service1_desc",
           "label": "Service 1 — Description",
           "type": "text",
-          "value": "Nettoyage complet de vos terrains quels que soient leurs tailles, implantation ou inclinaison"
+          "value": "Nettoyage complet de terrains et parcelles, quelle que soit leur taille ou leur pente : prévention incendie et respect des obligations légales de débroussaillement."
         },
         {
           "id": "service2_title",
@@ -62,7 +62,7 @@
           "id": "service2_desc",
           "label": "Service 2 — Description",
           "type": "text",
-          "value": "Intervention en hauteur sur corde sécurisée pour la taille raisonnée de vos arbres."
+          "value": "Taille raisonnée de vos arbres, au sol ou sur corde, dans le respect de leur biologie et des périodes d'intervention."
         },
         {
           "id": "service3_title",
@@ -74,7 +74,7 @@
           "id": "service3_desc",
           "label": "Service 3 — Description",
           "type": "text",
-          "value": "Abattage contrôlé avec techniques de rigging pour les zones difficiles d'accès."
+          "value": "Abattage contrôlé et démontage avec techniques de rigging, même en zones difficiles d'accès ou à proximité des habitations."
         }
       ]
     },
@@ -98,7 +98,7 @@
           "id": "intro",
           "label": "Texte d'introduction",
           "type": "text",
-          "value": "Des compétences vérifiées pour des interventions sûres et respectueuses du végétal."
+          "value": "Des compétences vérifiées et des méthodes éprouvées, pour des interventions sûres qui respectent le végétal."
         },
         {
           "id": "talent1_title",
@@ -194,7 +194,7 @@
           "id": "intro",
           "label": "Description de la zone",
           "type": "text",
-          "value": "Interventions autour de Lodève et des communes voisines du Larzac et des Cévennes."
+          "value": "Basé à La Vacquerie-et-Saint-Martin-de-Castries, j'interviens autour de Lodève, du Larzac et des Cévennes, dans un rayon d'environ 50 km."
         },
         {
           "id": "center_name",

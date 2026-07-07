@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guillaume Geysse — Élagage & Débroussaillage sur le Larzac</title>
-    <meta name="description" content="Élagage, débroussaillage et abattage contrôlé par Guillaume Geysse. Interventions au sol ou sur corde autour du Larzac et des Cévennes. Devis gratuit.">
+    <title>Élagueur sur le Larzac — Élagage, débroussaillage, abattage | Guillaume Geysse</title>
+    <meta name="description" content="Guillaume Geysse, élagueur-grimpeur à La Vacquerie (34). Élagage, débroussaillage et abattage contrôlé autour de Lodève, du Larzac et des Cévennes. Devis gratuit.">
+    <link rel="canonical" href="https://www.guillaumegeysse.fr/">
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
     <meta property="og:title" content="Guillaume Geysse — Élagage & Débroussaillage">
     <meta property="og:description" content="Interventions soignées et sécurisées, au sol ou sur corde, autour du Larzac et des Cévennes. Devis gratuit.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.guillaumegeysse.fr/">
+    <meta property="og:locale" content="fr_FR">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -22,7 +25,19 @@
         "postalCode": "34520",
         "addressCountry": "FR"
       },
-      "areaServed": ["Hérault", "Aveyron", "Gard", "Lozère"]
+      "areaServed": ["Hérault", "Aveyron", "Gard", "Lozère"],
+      "url": "https://www.guillaumegeysse.fr/",
+      "priceRange": "Sur devis",
+      "knowsAbout": ["Élagage", "Taille d'arbres", "Débroussaillage", "Abattage d'arbres", "Démontage", "Travail sur corde"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Prestations",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Élagage", "url": "https://www.guillaumegeysse.fr/elagage.html"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Débroussaillage", "url": "https://www.guillaumegeysse.fr/debroussaillage.html"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Abattage", "url": "https://www.guillaumegeysse.fr/abattage.html"}}
+        ]
+      }
     }
     </script>
     <style>
@@ -95,6 +110,11 @@
             transition: color .4s;
         }
         .group:hover .gg-service-tag { color: var(--gg-sauge); }
+        .gg-service-link {
+            display: inline-flex; align-items: center; gap: 6px; margin-top: 14px;
+            font-size: 13px; font-weight: 800; color: var(--gg-foret); transition: color .4s;
+        }
+        .group:hover .gg-service-link { color: #fff; }
 
         /* ---- Carte : consentement avant chargement ---- */
         .gg-map-consent {
@@ -215,12 +235,12 @@
                 <div class="lg:w-1/2">
                     <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#A3B18A]/20 text-[#344E41] rounded-full text-xs font-bold uppercase tracking-widest mb-8">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
-                        <span id="hero-badge">Intervention soignée & sécurisée</span>
+                        <span id="hero-badge">Élagueur-grimpeur — Larzac & Cévennes</span>
                     </div>
                     <h1 class="text-5xl lg:text-7xl font-black leading-[0.95] mb-8 tracking-tighter text-[#1A2F23]">
-                        L'art de la <br/> <span id="hero-title" class="text-[#588157]">taille pour tous les budgets</span>.
+                        L'art de la <br/> <span id="hero-title" class="text-[#588157]">taille raisonnée</span>.
                     </h1>
-                    <p id="hero-subtitle" class="text-lg lg:text-xl text-gray-500 mb-10 max-w-lg leading-relaxed font-medium">Expertise technique en élagage et débroussaillage pour sublimer et sécuriser vos espaces naturels (au sol ou sur corde).</p>
+                    <p id="hero-subtitle" class="text-lg lg:text-xl text-gray-500 mb-10 max-w-lg leading-relaxed font-medium">Élagage, débroussaillage et abattage contrôlé, au sol ou sur corde. Des interventions soignées, sécurisées et accessibles à tous les budgets, autour de Lodève, du Larzac et des Cévennes.</p>
                     <div class="flex flex-wrap gap-4 items-center">
                         <a href="#contact" class="px-10 py-5 bg-[#344E41] text-white rounded-full font-black text-sm uppercase tracking-widest hover:shadow-2xl hover:shadow-[#344E41]/30 transition-all transform hover:-translate-y-1 inline-block text-center">
                             Demander un devis
@@ -267,7 +287,7 @@
             <div class="mb-20 max-w-3xl gg-reveal">
                 <p id="certification-eyebrow" class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">Formation & expertise</p>
                 <h2 id="certification-title" class="text-4xl lg:text-5xl font-black mb-4 tracking-tighter">Certifications</h2>
-                <p id="certification-intro" class="text-gray-500 font-medium leading-relaxed">Des compétences vérifiées pour des interventions sûres et respectueuses du végétal.</p>
+                <p id="certification-intro" class="text-gray-500 font-medium leading-relaxed">Des compétences vérifiées et des méthodes éprouvées, pour des interventions sûres qui respectent le végétal.</p>
             </div>
 
             <div class="relative max-w-5xl mx-auto">
@@ -286,7 +306,7 @@
                     <div>
                         <p id="sector-eyebrow" class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">Zone d'intervention</p>
                         <h2 id="sector-title" class="text-4xl lg:text-5xl font-black mb-6 tracking-tighter">Secteur d'activité</h2>
-                        <p id="sector-intro" class="text-gray-500 font-medium leading-relaxed">Interventions autour de Lodève et des communes voisines du Larzac et des Cévennes.</p>
+                        <p id="sector-intro" class="text-gray-500 font-medium leading-relaxed">Basé à La Vacquerie-et-Saint-Martin-de-Castries, j'interviens autour de Lodève, du Larzac et des Cévennes, dans un rayon d'environ 50 km.</p>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -435,7 +455,9 @@
                     <div>
                         <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4">Navigation</p>
                         <div class="flex flex-col gap-3 text-sm font-bold text-gray-500">
-                            <a href="#services" class="hover:text-[#344E41]">Services</a>
+                            <a href="elagage.html" class="hover:text-[#344E41]">Élagage</a>
+                            <a href="debroussaillage.html" class="hover:text-[#344E41]">Débroussaillage</a>
+                            <a href="abattage.html" class="hover:text-[#344E41]">Abattage</a>
                             <a href="#secteur" class="hover:text-[#344E41]">Secteur</a>
                             <a href="#realisations" class="hover:text-[#344E41]">Réalisations</a>
                             <a href="#contact" class="hover:text-[#344E41]">Contact</a>
@@ -545,6 +567,7 @@
                 '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10 2.5 2.5"/><path d="m14 14 7.5 7.5"/><path d="M8.5 8.5 4 13l7 7 4.5-4.5"/><path d="m15 9 6-6"/><circle cx="9" cy="15" r="1"/></svg>'
             ]
             const tags = ["Terrains & parcelles", "Sur corde", "Zones contraintes"]
+            const pages = ["debroussaillage.html", "elagage.html", "abattage.html"]
             for (let i = 1; i <= 3; i++) {
                 const title = getField(fields, `service${i}_title`)
                 const desc = getField(fields, `service${i}_desc`)
@@ -555,6 +578,7 @@
                         <h3 class="text-2xl font-black mb-4 tracking-tight group-hover:text-white transition-colors">${escapeHTML(title)}</h3>
                         <p class="text-gray-500 leading-relaxed group-hover:text-white/70 transition-colors">${escapeHTML(desc)}</p>
                         <span class="gg-service-tag">${tags[i-1]}</span>
+                        <a href="${pages[i-1]}" class="gg-service-link">En savoir plus <span aria-hidden="true">→</span><span class="sr-only"> sur ${escapeHTML(title)}</span></a>
                     </div>`
             }
         }
