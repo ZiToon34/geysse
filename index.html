@@ -3,29 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guillaume Geysse — Élagage & Débroussaillage</title>
-    <meta name="description" content="Élagage, débroussaillage et abattage contrôlé par Guillaume Geysse. Demandez un diagnostic gratuit pour vos espaces naturels.">
+    <title>Guillaume Geysse — Élagage & Débroussaillage sur le Larzac</title>
+    <meta name="description" content="Élagage, débroussaillage et abattage contrôlé par Guillaume Geysse. Interventions au sol ou sur corde autour du Larzac et des Cévennes. Devis gratuit.">
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
+    <meta property="og:title" content="Guillaume Geysse — Élagage & Débroussaillage">
+    <meta property="og:description" content="Interventions soignées et sécurisées, au sol ou sur corde, autour du Larzac et des Cévennes. Devis gratuit.">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Guillaume Geysse",
+      "description": "Élagage, débroussaillage et abattage contrôlé, au sol ou sur corde.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "La Vacquerie-et-Saint-Martin-de-Castries",
+        "postalCode": "34520",
+        "addressCountry": "FR"
+      },
+      "areaServed": ["Hérault", "Aveyron", "Gard", "Lozère"]
+    }
+    </script>
     <style>
-        body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        :root {
+            --gg-foret: #344E41;
+            --gg-nuit: #1A2F23;
+            --gg-mousse: #588157;
+            --gg-sauge: #A3B18A;
+            --gg-brume: #EDF2E8;
+            --gg-papier: #FDFDFB;
+            --gg-lin: #E3E8DD;
         }
-        .bento-item:hover img { transform: scale(1.05); }
+
+        body {
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        /* ---- Lisibilité générale ---- */
+        h1, h2, h3 { text-wrap: balance; }
+        p { text-wrap: pretty; }
+
+        /* ---- Accessibilité ---- */
         .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
+            position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+            overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
         }
+        a:focus-visible, button:focus-visible, input:focus-visible,
+        select:focus-visible, textarea:focus-visible {
+            outline: 3px solid var(--gg-sauge);
+            outline-offset: 2px;
+            border-radius: 10px;
+        }
+
+        /* ---- Apparition au défilement ---- */
+        .gg-reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+        .gg-reveal.gg-in { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) {
+            .gg-reveal { opacity: 1; transform: none; transition: none; }
+            * { animation: none !important; transition-duration: .01ms !important; }
+        }
+
+        /* ---- Hero ---- */
+        .glass-card {
+            background: rgba(26, 47, 35, 0.55);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .gg-trust { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+        .gg-trust span {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-size: 12px; font-weight: 700; color: var(--gg-foret);
+            background: #fff; border: 1px solid var(--gg-lin);
+            border-radius: 999px; padding: 8px 16px;
+        }
+        .gg-trust svg { flex: none; color: var(--gg-mousse); }
+
+        /* ---- Services ---- */
+        .gg-service-icon {
+            width: 56px; height: 56px; border-radius: 18px;
+            background: var(--gg-brume); color: var(--gg-foret);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 24px; transition: background .4s, color .4s;
+        }
+        .group:hover .gg-service-icon { background: rgba(255,255,255,.14); color: #fff; }
+        .gg-service-tag {
+            display: inline-block; margin-top: 20px; font-size: 11px; font-weight: 800;
+            text-transform: uppercase; letter-spacing: .14em; color: var(--gg-mousse);
+            transition: color .4s;
+        }
+        .group:hover .gg-service-tag { color: var(--gg-sauge); }
+
+        /* ---- Carte : consentement avant chargement ---- */
+        .gg-map-consent {
+            position: absolute; inset: 0; z-index: 2;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            gap: 14px; padding: 32px; text-align: center;
+            background: linear-gradient(160deg, var(--gg-brume), #DDE6D5);
+        }
+        .gg-map-consent h3 { font-size: 20px; font-weight: 900; letter-spacing: -0.02em; color: var(--gg-nuit); }
+        .gg-map-consent p { max-width: 420px; font-size: 14px; line-height: 1.6; color: #5B6B5E; }
+        .gg-map-consent button {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--gg-foret); color: #fff; border: 0; cursor: pointer;
+            border-radius: 999px; padding: 14px 26px;
+            font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .14em;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .gg-map-consent button:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(52,78,65,.3); }
+
+        /* ---- Galerie ---- */
+        .bento-item { position: relative; cursor: zoom-in; background: var(--gg-brume); }
+        .bento-item::after {
+            content: ""; position: absolute; inset: 0; pointer-events: none;
+            background: linear-gradient(to top, rgba(26,47,35,.4), transparent 45%);
+            opacity: 0; transition: opacity .4s;
+        }
+        .bento-item:hover::after, .bento-item:focus-visible::after { opacity: 1; }
+        .bento-item:hover img { transform: scale(1.05); }
+        @media (min-width: 768px) {
+            .gg-feature { grid-column: span 2; grid-row: span 2; }
+        }
+
+        .gg-lightbox {
+            position: fixed; inset: 0; z-index: 100; display: none;
+            align-items: center; justify-content: center; padding: 24px;
+            background: rgba(26, 47, 35, .93);
+        }
+        .gg-lightbox.gg-open { display: flex; }
+        .gg-lightbox img { max-width: min(1100px, 100%); max-height: 88vh; border-radius: 18px; object-fit: contain; }
+        .gg-lightbox-close {
+            position: absolute; top: 20px; right: 20px;
+            width: 48px; height: 48px; border-radius: 50%; border: 0; cursor: pointer;
+            background: rgba(255,255,255,.12); color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px; line-height: 1;
+        }
+        .gg-lightbox-close:hover { background: rgba(255,255,255,.25); }
+
+        /* ---- Formulaire ---- */
+        .gg-label {
+            display: block; margin-bottom: 8px;
+            font-size: 11px; font-weight: 800; text-transform: uppercase;
+            letter-spacing: .12em; color: #6B7A6E;
+        }
+        #contact-form input, #contact-form select, #contact-form textarea {
+            border: 1px solid transparent;
+        }
+        #contact-form input:hover, #contact-form select:hover, #contact-form textarea:hover {
+            border-color: var(--gg-lin);
+        }
+
+        /* ---- WhatsApp flottant ---- */
+        .whatsapp-float {
+            position: fixed; right: 20px; bottom: 20px; z-index: 60;
+            width: 58px; height: 58px; border-radius: 50%;
+            background: #25D366; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 14px 32px rgba(26,47,35,.28);
+            transition: transform .2s;
+        }
+        .whatsapp-float:hover { transform: scale(1.07); }
+        .whatsapp-float img { width: 30px; height: 30px; }
     </style>
 </head>
 <body class="bg-[#FDFDFB] text-[#1A2F23] selection:bg-[#A3B18A] selection:text-white">
@@ -33,33 +173,33 @@
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <div class="w-14 h-14 bg-[#344E41] rounded-2xl flex items-center justify-center shadow-lg rotate-3 overflow-hidden">
+            <a href="#" class="flex items-center gap-4" aria-label="Retour en haut de page">
+                <div class="w-14 h-14 bg-[#344E41] rounded-2xl flex items-center justify-center shadow-lg overflow-hidden">
                     <img src="assets/logo.png" alt="Logo Guillaume Geysse" class="w-full h-full object-contain p-1">
                 </div>
                 <div class="flex flex-col">
                     <span class="font-black text-xl tracking-tighter uppercase leading-none">Guillaume Geysse</span>
-                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#A3B18A]">Arboriculture & Nature</span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#588157]">Élagage & Débroussaillage</span>
                 </div>
-            </div>
+            </a>
             <div class="hidden lg:flex items-center gap-10">
-                <a href="#services" class="text-sm font-bold uppercase tracking-wider hover:text-[#A3B18A] transition-colors">Services</a>
-                <a href="#certification" class="text-sm font-bold uppercase tracking-wider hover:text-[#A3B18A] transition-colors">Certification</a>
-                <a href="#secteur" class="text-sm font-bold uppercase tracking-wider hover:text-[#A3B18A] transition-colors">Secteur</a>
-                <a href="#realisations" class="text-sm font-bold uppercase tracking-wider hover:text-[#A3B18A] transition-colors">Réalisations</a>
-                <a href="#contact" class="text-sm font-bold uppercase tracking-wider hover:text-[#A3B18A] transition-colors">Contact</a>
+                <a href="#services" class="text-sm font-bold uppercase tracking-wider hover:text-[#588157] transition-colors">Services</a>
+                <a href="#certification" class="text-sm font-bold uppercase tracking-wider hover:text-[#588157] transition-colors">Certifications</a>
+                <a href="#secteur" class="text-sm font-bold uppercase tracking-wider hover:text-[#588157] transition-colors">Secteur</a>
+                <a href="#realisations" class="text-sm font-bold uppercase tracking-wider hover:text-[#588157] transition-colors">Réalisations</a>
+                <a href="#contact" class="text-sm font-bold uppercase tracking-wider hover:text-[#588157] transition-colors">Contact</a>
                 <a id="nav-phone" href="tel:0600000000" class="bg-[#344E41] text-white px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest hover:scale-105 transition-transform shadow-xl flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    Devis Express
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Devis gratuit
                 </a>
             </div>
-            <button id="menu-btn" class="lg:hidden p-2 bg-white rounded-lg shadow-sm">
-                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            <button id="menu-btn" class="lg:hidden p-2 bg-white rounded-lg shadow-sm" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             </button>
         </div>
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 p-8 flex flex-col gap-6 lg:hidden">
             <a href="#services" class="text-xl font-bold">Services</a>
-            <a href="#certification" class="text-xl font-bold">Certification</a>
+            <a href="#certification" class="text-xl font-bold">Certifications</a>
             <a href="#secteur" class="text-xl font-bold">Secteur</a>
             <a href="#realisations" class="text-xl font-bold">Réalisations</a>
             <a href="#contact" class="text-xl font-bold">Contact</a>
@@ -67,103 +207,72 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-[#A3B18A]/10 -skew-x-12 translate-x-32 hidden lg:block"></div>
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-[#A3B18A]/10 -skew-x-12 translate-x-32 hidden lg:block" aria-hidden="true"></div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-16">
                 <div class="lg:w-1/2">
                     <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#A3B18A]/20 text-[#344E41] rounded-full text-xs font-bold uppercase tracking-widest mb-8">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
                         <span id="hero-badge">Intervention soignée & sécurisée</span>
                     </div>
-                    <h1 class="text-6xl lg:text-8xl font-black leading-[0.9] mb-8 tracking-tighter text-[#1A2F23]">
-                        L'art de la <br/> <span id="hero-title" class="text-[#A3B18A]">taille haute</span>.
+                    <h1 class="text-5xl lg:text-7xl font-black leading-[0.95] mb-8 tracking-tighter text-[#1A2F23]">
+                        L'art de la <br/> <span id="hero-title" class="text-[#588157]">taille pour tous les budgets</span>.
                     </h1>
-                    <p id="hero-subtitle" class="text-xl text-gray-500 mb-10 max-w-md leading-relaxed font-medium"></p>
-                    <div class="flex flex-wrap gap-4">
+                    <p id="hero-subtitle" class="text-lg lg:text-xl text-gray-500 mb-10 max-w-lg leading-relaxed font-medium">Expertise technique en élagage et débroussaillage pour sublimer et sécuriser vos espaces naturels (au sol ou sur corde).</p>
+                    <div class="flex flex-wrap gap-4 items-center">
                         <a href="#contact" class="px-10 py-5 bg-[#344E41] text-white rounded-full font-black text-sm uppercase tracking-widest hover:shadow-2xl hover:shadow-[#344E41]/30 transition-all transform hover:-translate-y-1 inline-block text-center">
-                            Réserver un diagnostic
+                            Demander un devis
                         </a>
-                        <div class="flex items-center ml-4">
-                            <span class="text-xs font-bold text-gray-400">Interventions locales sur devis</span>
-                        </div>
+                        <a href="#realisations" class="text-sm font-bold text-[#344E41] hover:text-[#588157] transition-colors">Voir les réalisations →</a>
+                    </div>
+                    <div class="gg-trust">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Devis gratuit et sans engagement</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Au sol ou sur corde</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Larzac, Cévennes et alentours</span>
                     </div>
                 </div>
                 <div class="lg:w-1/2 relative">
-                    <div class="relative rounded-[3rem] overflow-hidden shadow-2xl rotate-2" style="aspect-ratio: 4/5; max-height: 600px;">
-                        <img id="hero-photo" src="images/560460957_122154674900839679_870784505987278401_n.jpg" alt="Élagueur au travail" 
+                    <div class="relative rounded-[3rem] overflow-hidden shadow-2xl" style="aspect-ratio: 4/5; max-height: 600px;">
+                        <img id="hero-photo" src="images/560460957_122154674900839679_870784505987278401_n.jpg" alt="Élagueur au travail"
                             style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
                         <div class="absolute bottom-8 left-8 right-8 glass-card p-6 rounded-3xl text-white">
                             <p class="text-sm font-bold opacity-80 uppercase mb-1">Dernière mission</p>
-                            <p id="hero-mission" class="text-xl font-bold"></p>
+                            <p id="hero-mission" class="text-xl font-bold">Saint Maurice-Navacelles — Élagage complet</p>
                         </div>
                     </div>
-                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#A3B18A] rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#A3B18A] rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" aria-hidden="true"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services -->
     <section id="services" class="py-32">
         <div class="container mx-auto px-6">
-            <div class="mb-20">
+            <div class="mb-20 gg-reveal">
+                <p class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">Savoir-faire</p>
                 <h2 class="text-4xl lg:text-5xl font-black mb-4 tracking-tighter">Services spécialisés</h2>
-                <p class="text-gray-400 font-medium">Une approche respectueuse de l'environnement et de la biologie de l'arbre.</p>
+                <p class="text-gray-500 font-medium max-w-2xl">Une approche respectueuse de l'environnement et de la biologie de l'arbre, adaptée à chaque terrain.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
             </div>
         </div>
     </section>
 
-    <!-- Certification -->
+    <!-- Certifications -->
     <section id="certification" class="py-32 bg-[#EDF2E8] overflow-hidden">
         <div class="container mx-auto px-6">
-            <div class="mb-20 max-w-3xl">
-                <p id="certification-eyebrow" class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">À compléter</p>
-                <h2 id="certification-title" class="text-4xl lg:text-5xl font-black mb-4 tracking-tighter">Certification</h2>
-                <p id="certification-intro" class="text-gray-500 font-medium leading-relaxed">Arbre de talent provisoire à remplacer par les certifications, formations, assurances et qualifications réellement détenues.</p>
+            <div class="mb-20 max-w-3xl gg-reveal">
+                <p id="certification-eyebrow" class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">Formation & expertise</p>
+                <h2 id="certification-title" class="text-4xl lg:text-5xl font-black mb-4 tracking-tighter">Certifications</h2>
+                <p id="certification-intro" class="text-gray-500 font-medium leading-relaxed">Des compétences vérifiées pour des interventions sûres et respectueuses du végétal.</p>
             </div>
 
             <div class="relative max-w-5xl mx-auto">
-                <div class="hidden lg:block absolute left-1/2 top-10 bottom-10 w-px bg-[#A3B18A]"></div>
+                <div class="hidden lg:block absolute left-1/2 top-10 bottom-10 w-px bg-[#A3B18A]" aria-hidden="true"></div>
                 <div id="certification-tree" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <article class="relative bg-white border border-[#DADFD2] rounded-3xl p-8 shadow-sm">
-                        <span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#344E41] text-white font-black mb-6">01</span>
-                        <h3 class="text-2xl font-black mb-3">Sécurité chantier</h3>
-                        <p class="text-gray-500 leading-relaxed">Module provisoire : EPI, balisage, analyse des risques et procédures d’intervention à renseigner.</p>
-                    </article>
-
-                    <article class="relative bg-white border border-[#DADFD2] rounded-3xl p-8 shadow-sm lg:mt-16">
-                        <span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#588157] text-white font-black mb-6">02</span>
-                        <h3 class="text-2xl font-black mb-3">Grimpe et accès</h3>
-                        <p class="text-gray-500 leading-relaxed">Module provisoire : techniques de corde, accès difficiles et maintien au poste à compléter.</p>
-                    </article>
-
-                    <article class="relative bg-white border border-[#DADFD2] rounded-3xl p-8 shadow-sm">
-                        <span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#588157] text-white font-black mb-6">03</span>
-                        <h3 class="text-2xl font-black mb-3">Biologie de l’arbre</h3>
-                        <p class="text-gray-500 leading-relaxed">Module provisoire : taille raisonnée, saisonnalité, diagnostic sanitaire et respect du végétal.</p>
-                    </article>
-
-                    <article class="relative bg-white border border-[#DADFD2] rounded-3xl p-8 shadow-sm lg:mt-16">
-                        <span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#A3B18A] text-[#1A2F23] font-black mb-6">04</span>
-                        <h3 class="text-2xl font-black mb-3">Abattage contrôlé</h3>
-                        <p class="text-gray-500 leading-relaxed">Module provisoire : démontage, rétention, zones contraintes et coordination au sol.</p>
-                    </article>
-
-                    <article class="relative bg-white border border-[#DADFD2] rounded-3xl p-8 shadow-sm">
-                        <span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#A3B18A] text-[#1A2F23] font-black mb-6">05</span>
-                        <h3 class="text-2xl font-black mb-3">Débroussaillage</h3>
-                        <p class="text-gray-500 leading-relaxed">Module provisoire : prévention incendie, gestion des végétaux et nettoyage des parcelles.</p>
-                    </article>
-
-                    <article class="relative bg-[#344E41] text-white rounded-3xl p-8 shadow-xl lg:mt-16">
-                        <span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-white text-[#344E41] font-black mb-6">06</span>
-                        <h3 class="text-2xl font-black mb-3">Documents vérifiés</h3>
-                        <p class="text-white/70 leading-relaxed">Emplacement final pour assurance, attestations, formations et justificatifs à publier après validation.</p>
-                    </article>
                 </div>
             </div>
         </div>
@@ -173,35 +282,35 @@
     <section id="secteur" class="py-32 bg-white">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 items-stretch">
-                <div class="flex flex-col justify-between gap-10">
+                <div class="flex flex-col justify-between gap-10 gg-reveal">
                     <div>
                         <p id="sector-eyebrow" class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">Zone d'intervention</p>
                         <h2 id="sector-title" class="text-4xl lg:text-5xl font-black mb-6 tracking-tighter">Secteur d'activité</h2>
-                        <p id="sector-intro" class="text-gray-500 font-medium leading-relaxed">Interventions autour de La Vacquerie-et-Saint-Martin-de-Castries et des communes voisines. Le périmètre ci-dessous est indicatif et sera ajusté avec la zone exacte de déplacement.</p>
+                        <p id="sector-intro" class="text-gray-500 font-medium leading-relaxed">Interventions autour de Lodève et des communes voisines du Larzac et des Cévennes.</p>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="rounded-2xl border border-gray-100 p-5">
                             <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Point central</p>
-                            <p id="sector-center-name" class="font-black">Mas de Figuières</p>
+                            <p id="sector-center-name" class="font-black">Larzac</p>
                             <p id="sector-center-address" class="text-sm text-gray-500 mt-1">34520 La Vacquerie-et-Saint-Martin-de-Castries</p>
                         </div>
                         <div class="rounded-2xl border border-gray-100 p-5">
                             <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Rayon indicatif</p>
-                            <p id="sector-radius" class="font-black">À définir</p>
-                            <p id="sector-radius-note" class="text-sm text-gray-500 mt-1">Carte et limites à compléter avec le secteur réel.</p>
+                            <p id="sector-radius" class="font-black">~50 km</p>
+                            <p id="sector-radius-note" class="text-sm text-gray-500 mt-1">Déplacement possible au-delà selon la nature du chantier.</p>
                         </div>
                     </div>
 
                     <ul id="sector-cities" class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm font-bold text-[#344E41]">
-                        <li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">La Vacquerie</li>
-                        <li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">Lodève</li>
-                        <li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">Ganges</li>
-                        <li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">Saint-Guilhem-le-Désert</li>
+                        <li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">Hérault</li>
+                        <li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">Aveyron</li>
+                        <li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">Gard</li>
+                        <li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">Lozère</li>
                     </ul>
                 </div>
 
-                <div class="relative min-h-[420px] rounded-[2rem] overflow-hidden border border-gray-100 bg-[#EDF2E8] shadow-sm">
+                <div class="relative min-h-[420px] rounded-[2rem] overflow-hidden border border-gray-100 bg-[#EDF2E8] shadow-sm gg-reveal">
                     <iframe
                         id="sector-map"
                         title="Carte du secteur d'intervention"
@@ -209,9 +318,15 @@
                         loading="lazy"
                         referrerpolicy="strict-origin-when-cross-origin">
                     </iframe>
+                    <div id="map-consent" class="gg-map-consent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#588157" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <h3 id="map-consent-title">Afficher la carte du secteur</h3>
+                        <p id="map-consent-text">La carte est fournie par Google Maps. Elle peut transmettre des données à Google uniquement après activation.</p>
+                        <button type="button" id="map-consent-btn">Afficher la carte</button>
+                    </div>
                     <div class="pointer-events-none absolute left-6 bottom-6 right-6 rounded-2xl bg-white/90 backdrop-blur p-4 shadow-lg">
-                        <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Délimitation provisoire</p>
-                        <p id="sector-map-note" class="text-sm font-bold text-[#1A2F23]">Zone à préciser : remplacer cette carte par une Google My Maps si vous souhaitez afficher une vraie frontière tracée.</p>
+                        <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Périmètre</p>
+                        <p id="sector-map-note" class="text-sm font-bold text-[#1A2F23]">Périmètre indicatif. Contactez-nous pour vérifier votre secteur.</p>
                     </div>
                 </div>
             </div>
@@ -221,9 +336,10 @@
     <!-- Réalisations -->
     <section id="realisations" class="py-32 bg-[#F5F5F0]">
         <div class="container mx-auto px-6">
-            <div class="mb-20">
+            <div class="mb-20 gg-reveal">
+                <p class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">Sur le terrain</p>
                 <h2 class="text-4xl lg:text-5xl font-black mb-4 tracking-tighter">Réalisations</h2>
-                <p class="text-gray-400 font-medium">Chaque projet est unique, chaque arbre raconte une histoire.</p>
+                <p class="text-gray-500 font-medium">Chaque projet est unique, chaque arbre raconte une histoire. Cliquez sur une photo pour l'agrandir.</p>
             </div>
             <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <p class="text-gray-400 col-span-full text-center py-10">Aucune photo pour le moment.</p>
@@ -233,61 +349,63 @@
 
     <!-- Contact -->
     <section id="contact" class="py-32 bg-[#1A2F23] text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, #A3B18A 1px, transparent 1px); background-size: 30px 30px;"></div>
+        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, #A3B18A 1px, transparent 1px); background-size: 30px 30px;" aria-hidden="true"></div>
         <div class="container mx-auto px-6">
             <div class="flex flex-col lg:flex-row gap-20 relative z-10">
-                <div class="lg:w-1/2">
+                <div class="lg:w-1/2 gg-reveal">
+                    <p class="text-xs font-black uppercase tracking-[0.2em] text-[#A3B18A] mb-4">Contact</p>
                     <h2 class="text-5xl lg:text-6xl font-black mb-8 tracking-tighter">On commence <br/> quand ?</h2>
-                    <p class="text-xl text-white/60 mb-12 max-w-sm">Décrivez votre projet et recevez une estimation gratuite dans les meilleurs délais.</p>
+                    <p class="text-xl text-white/60 mb-12 max-w-sm leading-relaxed">Décrivez votre projet et recevez une estimation gratuite dans les meilleurs délais.</p>
                     <div class="space-y-6">
-                        <div class="flex items-center gap-6 group cursor-pointer">
+                        <a href="tel:0600000000" id="contact-phone-link" class="flex items-center gap-6 group">
                             <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-[#A3B18A] group-hover:text-[#1A2F23] transition-all">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                             </div>
                             <div>
-                                <p class="text-[10px] font-black uppercase tracking-widest text-white/40">Direct</p>
-                                <p id="contact-phone-display" class="text-lg font-bold"></p>
+                                <p class="text-[10px] font-black uppercase tracking-widest text-white/40">Téléphone</p>
+                                <p id="contact-phone-display" class="text-lg font-bold">06 00 00 00 00</p>
                             </div>
-                        </div>
-                        <div class="flex items-center gap-6 group cursor-pointer">
+                        </a>
+                        <a href="mailto:hello@guillaumegeysse.fr" id="contact-email-link" class="flex items-center gap-6 group">
                             <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-[#A3B18A] group-hover:text-[#1A2F23] transition-all">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                             </div>
                             <div>
                                 <p class="text-[10px] font-black uppercase tracking-widest text-white/40">Email</p>
-                                <p id="contact-email-display" class="text-lg font-bold"></p>
+                                <p id="contact-email-display" class="text-lg font-bold">hello@guillaumegeysse.fr</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
-                <div class="lg:w-1/2 bg-white rounded-[2.5rem] p-10 text-[#1A2F23]">
+                <div class="lg:w-1/2 bg-white rounded-[2.5rem] p-10 text-[#1A2F23] gg-reveal">
                     <form id="contact-form" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <label class="block">
-                                <span class="sr-only">Prénom et nom</span>
-                                <input name="name" type="text" placeholder="Prénom Nom" autocomplete="name" required class="w-full bg-gray-50 border-none rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all">
-                            </label>
-                            <label class="block">
-                                <span class="sr-only">Téléphone</span>
-                                <input name="phone" type="tel" placeholder="Téléphone" autocomplete="tel" class="w-full bg-gray-50 border-none rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all">
-                            </label>
+                            <div>
+                                <label class="gg-label" for="form-name">Prénom et nom *</label>
+                                <input id="form-name" name="name" type="text" placeholder="Ex : Marie Durand" autocomplete="name" required class="w-full bg-gray-50 rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="gg-label" for="form-phone">Téléphone</label>
+                                <input id="form-phone" name="phone" type="tel" placeholder="06 12 34 56 78" autocomplete="tel" class="w-full bg-gray-50 rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all">
+                            </div>
                         </div>
-                        <label class="block">
-                            <span class="sr-only">Email</span>
-                            <input name="email" type="email" placeholder="Email" autocomplete="email" required class="w-full bg-gray-50 border-none rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all">
-                        </label>
-                        <label class="block">
-                            <span class="sr-only">Type de prestation</span>
-                            <select name="service" class="w-full bg-gray-50 border-none rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all">
-                            <option>Élagage</option>
-                            <option>Débroussaillage</option>
-                            <option>Abattage</option>
+                        <div>
+                            <label class="gg-label" for="form-email">Email *</label>
+                            <input id="form-email" name="email" type="email" placeholder="vous@exemple.fr" autocomplete="email" required class="w-full bg-gray-50 rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="gg-label" for="form-service">Type de prestation</label>
+                            <select id="form-service" name="service" class="w-full bg-gray-50 rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all">
+                                <option>Élagage</option>
+                                <option>Débroussaillage</option>
+                                <option>Abattage</option>
+                                <option>Autre / je ne sais pas</option>
                             </select>
-                        </label>
-                        <label class="block">
-                            <span class="sr-only">Détails du projet</span>
-                            <textarea name="message" rows="4" placeholder="Détails du projet..." required class="w-full bg-gray-50 border-none rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all"></textarea>
-                        </label>
+                        </div>
+                        <div>
+                            <label class="gg-label" for="form-message">Détails du projet *</label>
+                            <textarea id="form-message" name="message" rows="4" placeholder="Décrivez le terrain, les arbres concernés, l'accès au chantier…" required class="w-full bg-gray-50 rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all"></textarea>
+                        </div>
                         <p class="text-xs leading-relaxed text-gray-500">
                             Les informations saisies servent uniquement à répondre à votre demande de devis. Elles sont envoyées par votre logiciel de messagerie et ne sont pas stockées par ce site. Consultez la <a href="politique-confidentialite.html" class="font-bold text-[#344E41] underline">politique de confidentialité</a>.
                         </p>
@@ -303,26 +421,54 @@
     <!-- Footer -->
     <footer class="py-20 border-t border-gray-100">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-10">
-                <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 bg-[#344E41] rounded-xl flex items-center justify-center overflow-hidden">
-                        <img src="assets/logo.png" alt="Logo Guillaume Geysse" class="w-full h-full object-contain p-1">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-[#344E41] rounded-xl flex items-center justify-center overflow-hidden">
+                            <img src="assets/logo.png" alt="Logo Guillaume Geysse" class="w-full h-full object-contain p-1">
+                        </div>
+                        <span class="font-black text-lg tracking-tighter uppercase">Guillaume Geysse</span>
                     </div>
-                    <span class="font-black text-lg tracking-tighter uppercase">Guillaume Geysse</span>
+                    <p class="text-sm text-gray-500 max-w-xs leading-relaxed">Élagage, débroussaillage et abattage contrôlé sur le Larzac, les Cévennes et alentours. Interventions au sol ou sur corde.</p>
                 </div>
-                <div class="flex flex-wrap justify-center gap-6 text-sm font-bold text-gray-400">
-                    <a id="footer-instagram" href="#" class="hover:text-[#344E41]">Instagram</a>
-                    <a id="footer-facebook" href="#" class="hover:text-[#344E41]">Facebook</a>
-                    <a id="footer-linkedin" href="#" class="hover:text-[#344E41]">LinkedIn</a>
-                    <a href="mentions-legales.html" class="hover:text-[#344E41]">Mentions légales</a>
-                    <a href="politique-confidentialite.html" class="hover:text-[#344E41]">Confidentialité</a>
-                    <a href="cookies.html" class="hover:text-[#344E41]">Cookies</a>
-                    <a href="conditions-generales.html" class="hover:text-[#344E41]">Conditions générales</a>
+                <div class="flex flex-wrap gap-16">
+                    <div>
+                        <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4">Navigation</p>
+                        <div class="flex flex-col gap-3 text-sm font-bold text-gray-500">
+                            <a href="#services" class="hover:text-[#344E41]">Services</a>
+                            <a href="#secteur" class="hover:text-[#344E41]">Secteur</a>
+                            <a href="#realisations" class="hover:text-[#344E41]">Réalisations</a>
+                            <a href="#contact" class="hover:text-[#344E41]">Contact</a>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4">Suivez-nous</p>
+                        <div class="flex flex-col gap-3 text-sm font-bold text-gray-500">
+                            <a id="footer-instagram" href="#" class="hover:text-[#344E41]">Instagram</a>
+                            <a id="footer-facebook" href="#" class="hover:text-[#344E41]">Facebook</a>
+                            <a id="footer-linkedin" href="#" class="hover:text-[#344E41]">LinkedIn</a>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4">Informations légales</p>
+                        <div class="flex flex-col gap-3 text-sm font-bold text-gray-500">
+                            <a href="mentions-legales.html" class="hover:text-[#344E41]">Mentions légales</a>
+                            <a href="politique-confidentialite.html" class="hover:text-[#344E41]">Confidentialité</a>
+                            <a href="cookies.html" class="hover:text-[#344E41]">Cookies</a>
+                            <a href="conditions-generales.html" class="hover:text-[#344E41]">Conditions générales</a>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-xs font-bold text-gray-300 uppercase tracking-widest">© 2026 — Guillaume Geysse</p>
             </div>
+            <p class="text-xs font-bold text-gray-300 uppercase tracking-widest">© 2026 — Guillaume Geysse. Tous droits réservés.</p>
         </div>
     </footer>
+
+    <!-- Lightbox galerie -->
+    <div id="gg-lightbox" class="gg-lightbox" role="dialog" aria-modal="true" aria-label="Photo agrandie">
+        <button type="button" class="gg-lightbox-close" id="gg-lightbox-close" aria-label="Fermer">✕</button>
+        <img id="gg-lightbox-img" src="" alt="Réalisation agrandie">
+    </div>
 
     <script>
         const ASSET = (path) => `${path}?t=${Date.now()}`
@@ -348,31 +494,39 @@
         // CHARGER LE CONTENU
         // ==============================
         async function loadContent() {
-    try {
-        const data = await fetchContent()
-        data.sections.forEach(section => {
-            if (section.id === "hero") applyHero(section.fields)
-            if (section.id === "services") applyServices(section.fields)
-            if (section.id === "certification") applyCertification(section.fields)
-            if (section.id === "sector") applySector(section.fields)
-            if (section.id === "gallery") applyGallery(section.fields)
-            if (section.id === "contact") applyContact(section.fields)
-            if (section.id === "social") applySocial(section.fields)
-        })
-    } catch (err) {
-        console.error("Erreur chargement content.json", err)
-    }
-}
+            try {
+                const data = await fetchContent()
+                data.sections.forEach(section => {
+                    if (section.id === "hero") applyHero(section.fields)
+                    if (section.id === "services") applyServices(section.fields)
+                    if (section.id === "certification") applyCertification(section.fields)
+                    if (section.id === "sector") applySector(section.fields)
+                    if (section.id === "gallery") applyGallery(section.fields)
+                    if (section.id === "contact") applyContact(section.fields)
+                    if (section.id === "social") applySocial(section.fields)
+                })
+            } catch (err) {
+                console.error("Erreur chargement content.json", err)
+            } finally {
+                observeReveals()
+            }
+        }
 
         function getField(fields, id) {
             return fields.find(f => f.id === id)?.value || ""
         }
 
+        function setText(id, value) {
+            const element = document.getElementById(id)
+            if (element && value) element.textContent = value
+        }
+
         function applyHero(fields) {
-            document.getElementById("hero-badge").textContent = getField(fields, "badge")
-            document.getElementById("hero-title").textContent = getField(fields, "title")
-            document.getElementById("hero-subtitle").textContent = getField(fields, "subtitle")
-            document.getElementById("hero-mission").textContent = getField(fields, "last_mission")
+            setText("hero-badge", getField(fields, "badge"))
+            const title = getField(fields, "title").replace(/\s+/g, " ").trim()
+            setText("hero-title", title)
+            setText("hero-subtitle", getField(fields, "subtitle"))
+            setText("hero-mission", getField(fields, "last_mission"))
             const photo = getField(fields, "photo")
             if (photo) {
                 document.getElementById("hero-photo").src = IMAGE_BASE(photo)
@@ -382,24 +536,33 @@
         function applyServices(fields) {
             const grid = document.getElementById("services-grid")
             grid.innerHTML = ""
-            const icons = ["🌿", "🪚", "🌳"]
+            const icons = [
+                // Débroussaillage / végétation
+                '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-.987 2.27-1.975 3.9-2.2a5.56 5.56 0 0 1 3.8 1.5 4 4 0 0 0 6.187-2.353 3.5 3.5 0 0 0 3.69-5.116A3.5 3.5 0 0 0 20.95 8 3.5 3.5 0 1 0 16 3.05a3.5 3.5 0 0 0-5.831 1.373 3.5 3.5 0 0 0-5.116 3.69 4 4 0 0 0-2.348 6.155C3.499 15.42 4.409 16.712 4.2 18.1 3.926 19.743 3.014 20.732 2 22"/><path d="M2 22 17 7"/></svg>',
+                // Élagage / hauteur
+                '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-7"/><path d="M9 8h6"/><path d="M12 2a5 5 0 0 0-5 5c0 1.5.7 2.8 1.7 3.7A5 5 0 0 0 12 15a5 5 0 0 0 3.3-4.3c1-.9 1.7-2.2 1.7-3.7a5 5 0 0 0-5-5Z"/></svg>',
+                // Abattage / tronc
+                '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10 2.5 2.5"/><path d="m14 14 7.5 7.5"/><path d="M8.5 8.5 4 13l7 7 4.5-4.5"/><path d="m15 9 6-6"/><circle cx="9" cy="15" r="1"/></svg>'
+            ]
+            const tags = ["Terrains & parcelles", "Sur corde", "Zones contraintes"]
             for (let i = 1; i <= 3; i++) {
                 const title = getField(fields, `service${i}_title`)
                 const desc = getField(fields, `service${i}_desc`)
                 if (!title) continue
                 grid.innerHTML += `
-                    <div class="group relative bg-white border border-gray-100 p-10 rounded-[2.5rem] hover:bg-[#344E41] transition-all duration-500 shadow-sm hover:shadow-2xl">
-                        <div class="text-4xl mb-6">${icons[i-1]}</div>
+                    <div class="group relative bg-white border border-gray-100 p-10 rounded-[2.5rem] hover:bg-[#344E41] transition-all duration-500 shadow-sm hover:shadow-2xl gg-reveal">
+                        <div class="gg-service-icon">${icons[i-1]}</div>
                         <h3 class="text-2xl font-black mb-4 tracking-tight group-hover:text-white transition-colors">${escapeHTML(title)}</h3>
-                        <p class="text-gray-400 leading-relaxed group-hover:text-white/70 transition-colors">${escapeHTML(desc)}</p>
+                        <p class="text-gray-500 leading-relaxed group-hover:text-white/70 transition-colors">${escapeHTML(desc)}</p>
+                        <span class="gg-service-tag">${tags[i-1]}</span>
                     </div>`
             }
         }
 
         function applyCertification(fields) {
-            setText("certification-eyebrow", getField(fields, "eyebrow") || "À compléter")
-            setText("certification-title", getField(fields, "title") || "Certification")
-            setText("certification-intro", getField(fields, "intro") || "Arbre de talent provisoire à remplacer par les certifications, formations, assurances et qualifications réellement détenues.")
+            setText("certification-eyebrow", getField(fields, "eyebrow"))
+            setText("certification-title", getField(fields, "title"))
+            setText("certification-intro", getField(fields, "intro"))
 
             const grid = document.getElementById("certification-tree")
             const styles = [
@@ -419,7 +582,7 @@
 
                 const isLast = i === 6
                 grid.innerHTML += `
-                    <article class="relative ${isLast ? "bg-[#344E41] text-white shadow-xl" : "bg-white border border-[#DADFD2] shadow-sm"} rounded-3xl p-8 ${i % 2 === 0 ? "lg:mt-16" : ""}">
+                    <article class="relative ${isLast ? "bg-[#344E41] text-white shadow-xl" : "bg-white border border-[#DADFD2] shadow-sm"} rounded-3xl p-8 ${i % 2 === 0 ? "lg:mt-16" : ""} gg-reveal">
                         <span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl ${styles[i - 1]} font-black mb-6">${String(i).padStart(2, "0")}</span>
                         <h3 class="text-2xl font-black mb-3">${escapeHTML(title)}</h3>
                         <p class="${isLast ? "text-white/70" : "text-gray-500"} leading-relaxed">${escapeHTML(desc)}</p>
@@ -428,14 +591,16 @@
         }
 
         function applySector(fields) {
-            setText("sector-eyebrow", getField(fields, "eyebrow") || "Zone d'intervention")
-            setText("sector-title", getField(fields, "title") || "Secteur d'activité")
-            setText("sector-intro", getField(fields, "intro") || "Interventions autour de La Vacquerie-et-Saint-Martin-de-Castries et des communes voisines.")
-            setText("sector-center-name", getField(fields, "center_name") || "Mas de Figuières")
-            setText("sector-center-address", getField(fields, "center_address") || "34520 La Vacquerie-et-Saint-Martin-de-Castries")
-            setText("sector-radius", getField(fields, "radius") || "À définir")
-            setText("sector-radius-note", getField(fields, "radius_note") || "Carte et limites à compléter avec le secteur réel.")
-            setText("sector-map-note", getField(fields, "map_note") || "Zone à préciser : remplacer cette carte par une Google My Maps si vous souhaitez afficher une vraie frontière tracée.")
+            setText("sector-eyebrow", getField(fields, "eyebrow"))
+            setText("sector-title", getField(fields, "title"))
+            setText("sector-intro", getField(fields, "intro"))
+            setText("sector-center-name", getField(fields, "center_name"))
+            setText("sector-center-address", getField(fields, "center_address"))
+            setText("sector-radius", getField(fields, "radius"))
+            setText("sector-radius-note", getField(fields, "radius_note"))
+            setText("sector-map-note", getField(fields, "map_note"))
+            setText("map-consent-title", getField(fields, "map_consent_title"))
+            setText("map-consent-text", getField(fields, "map_consent_text"))
 
             const cityList = document.getElementById("sector-cities")
             cityList.innerHTML = ""
@@ -445,16 +610,12 @@
                 cityList.innerHTML += `<li class="bg-[#EDF2E8] rounded-2xl px-5 py-4">${escapeHTML(city)}</li>`
             }
 
-            const map = document.getElementById("sector-map")
+            // La carte n'est chargée qu'après consentement (RGPD)
             const query = getField(fields, "map_query") || `${getField(fields, "center_name")} ${getField(fields, "center_address")}`.trim()
             const zoom = getField(fields, "map_zoom") || "10"
             const embedUrl = getField(fields, "map_embed_url")
-            map.src = buildGoogleMapSrc(embedUrl, query, zoom)
-        }
-
-        function setText(id, value) {
-            const element = document.getElementById(id)
-            if (element) element.textContent = value
+            const map = document.getElementById("sector-map")
+            map.dataset.src = buildGoogleMapSrc(embedUrl, query, zoom)
         }
 
         function buildGoogleMapSrc(embedUrl, query, zoom) {
@@ -472,6 +633,13 @@
             return `https://www.google.com/maps?q=${encodeURIComponent(query || "La Vacquerie-et-Saint-Martin-de-Castries")}&z=${safeZoom}&output=embed`
         }
 
+        document.getElementById("map-consent-btn").addEventListener("click", () => {
+            const map = document.getElementById("sector-map")
+            const fallback = "https://www.google.com/maps?q=La%20Vacquerie-et-Saint-Martin-de-Castries&z=10&output=embed"
+            map.src = map.dataset.src || fallback
+            document.getElementById("map-consent").style.display = "none"
+        })
+
         function applyGallery(fields) {
             const photos = fields.find(f => f.id === "photos")?.value || []
             const grid = document.getElementById("gallery-grid")
@@ -479,19 +647,52 @@
                 grid.innerHTML = `<p class="text-gray-400 col-span-full text-center py-10">Aucune photo pour le moment.</p>`
                 return
             }
-            grid.innerHTML = photos.map(photo => `
-                <div class="bento-item rounded-2xl overflow-hidden aspect-square">
-                    <img src="${IMAGE_BASE(photo)}" alt="Réalisation" class="w-full h-full object-cover transition-transform duration-500">
-                </div>`).join("")
+            grid.innerHTML = photos.map((photo, index) => `
+                <button type="button" class="bento-item rounded-2xl overflow-hidden aspect-square gg-reveal ${index === 0 ? "gg-feature" : ""}" data-photo="${escapeHTML(photo)}" aria-label="Agrandir la photo ${index + 1}">
+                    <img src="${IMAGE_BASE(photo)}" alt="Réalisation ${index + 1}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500">
+                </button>`).join("")
+
+            grid.querySelectorAll(".bento-item").forEach(item => {
+                item.addEventListener("click", () => openLightbox(item.dataset.photo))
+            })
         }
+
+        // ==============================
+        // LIGHTBOX
+        // ==============================
+        const lightbox = document.getElementById("gg-lightbox")
+        const lightboxImg = document.getElementById("gg-lightbox-img")
+
+        function openLightbox(photo) {
+            lightboxImg.src = IMAGE_BASE(photo)
+            lightbox.classList.add("gg-open")
+            document.body.style.overflow = "hidden"
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove("gg-open")
+            lightboxImg.src = ""
+            document.body.style.overflow = ""
+        }
+
+        document.getElementById("gg-lightbox-close").addEventListener("click", closeLightbox)
+        lightbox.addEventListener("click", (event) => {
+            if (event.target === lightbox) closeLightbox()
+        })
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") closeLightbox()
+        })
 
         function applyContact(fields) {
             const phone = getField(fields, "phone")
             const email = getField(fields, "email")
             document.getElementById("contact-phone-display").textContent = phone
             document.getElementById("contact-email-display").textContent = email
-            document.getElementById("nav-phone").href = `tel:${phone.replace(/\s/g, "")}`
-            document.getElementById("mobile-phone").href = `tel:${phone.replace(/\s/g, "")}`
+            const tel = `tel:${phone.replace(/\s/g, "")}`
+            document.getElementById("nav-phone").href = tel
+            document.getElementById("mobile-phone").href = tel
+            document.getElementById("contact-phone-link").href = tel
+            document.getElementById("contact-email-link").href = `mailto:${email}`
             document.getElementById("contact-form").dataset.recipient = email
         }
 
@@ -512,8 +713,31 @@
             link.target = "_blank"
         }
 
+        // ==============================
+        // APPARITION AU DÉFILEMENT
+        // ==============================
+        function observeReveals() {
+            const elements = document.querySelectorAll(".gg-reveal:not(.gg-in)")
+            if (!("IntersectionObserver" in window)) {
+                elements.forEach(el => el.classList.add("gg-in"))
+                return
+            }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("gg-in")
+                        observer.unobserve(entry.target)
+                    }
+                })
+            }, { threshold: 0.12 })
+            elements.forEach(el => observer.observe(el))
+        }
+
         loadContent()
 
+        // ==============================
+        // FORMULAIRE (préparation d'email, aucun stockage)
+        // ==============================
         document.getElementById("contact-form").addEventListener("submit", (event) => {
             event.preventDefault()
             const form = event.currentTarget
@@ -556,6 +780,7 @@
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden')
             const isHidden = mobileMenu.classList.contains('hidden')
+            menuBtn.setAttribute('aria-expanded', String(!isHidden))
             menuIcon.innerHTML = isHidden
                 ? '<line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>'
                 : '<line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/>'
@@ -563,14 +788,16 @@
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden')
+                menuBtn.setAttribute('aria-expanded', 'false')
                 menuIcon.innerHTML = '<line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>'
             })
         })
     </script>
-    <a href="https://wa.me/33788937661?text=Bonjour,%20je%20souhaite%20des%20informations" 
-    class="whatsapp-float" 
-    target="_blank">
-    <img src="images/whatsapp-svgrepo-com.svg" alt="WhatsApp">
- </a>
+    <a href="https://wa.me/33788937661?text=Bonjour,%20je%20souhaite%20des%20informations"
+       class="whatsapp-float"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Contacter sur WhatsApp">
+       <img src="images/whatsapp-svgrepo-com.svg" alt="WhatsApp">
+    </a>
 </body>
 </html>
