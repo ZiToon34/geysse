@@ -320,13 +320,13 @@
           "id": "phone",
           "label": "Téléphone",
           "type": "text",
-          "value": "06 00 00 00 00"
+          "value": " 06 47 59 74 65"
         },
         {
           "id": "email",
           "label": "Email",
           "type": "text",
-          "value": "hello@guillaumegeysse.fr"
+          "value": "guillaume.geysse@gmail.com"
         }
       ]
     },
@@ -344,7 +344,7 @@
           "id": "facebook",
           "label": "Lien Facebook",
           "type": "text",
-          "value": "#"
+          "value": "https://www.facebook.com/profile.php?id=61575190376907"
         },
         {
           "id": "linkedin",
