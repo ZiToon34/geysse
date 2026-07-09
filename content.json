@@ -320,7 +320,7 @@
           "id": "phone",
           "label": "Téléphone",
           "type": "text",
-          "value": " 06 47 59 74 65"
+          "value": "06 47 59 74 65"
         },
         {
           "id": "email",
@@ -344,7 +344,7 @@
           "id": "facebook",
           "label": "Lien Facebook",
           "type": "text",
-          "value": "https://www.facebook.com/profile.php?id=61575190376907"
+          "value": "#"
         },
         {
           "id": "linkedin",

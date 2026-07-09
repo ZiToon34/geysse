@@ -163,29 +163,26 @@
         }
         .gg-lightbox-close:hover { background: rgba(255,255,255,.25); }
 
-        /* ---- Formulaire ---- */
-        .gg-label {
-            display: block; margin-bottom: 8px;
-            font-size: 11px; font-weight: 800; text-transform: uppercase;
-            letter-spacing: .12em; color: #6B7A6E;
+        /* ---- Carte d'appel ---- */
+        .gg-call-btn {
+            display: inline-flex; align-items: center; gap: 14px;
+            background: var(--gg-foret); color: #fff;
+            padding: 20px 32px; border-radius: 999px;
+            font-size: 22px; font-weight: 900; letter-spacing: 0.02em;
+            transition: transform .2s, box-shadow .2s;
         }
-        #contact-form input, #contact-form select, #contact-form textarea {
-            border: 1px solid transparent;
+        .gg-call-btn:hover { transform: translateY(-2px); box-shadow: 0 18px 38px rgba(52,78,65,.35); }
+        .gg-call-points { list-style: none; padding: 0; margin-top: 28px; display: grid; gap: 12px; }
+        .gg-call-points li {
+            position: relative; padding-left: 30px;
+            font-size: 14px; font-weight: 600; color: #556458;
         }
-        #contact-form input:hover, #contact-form select:hover, #contact-form textarea:hover {
-            border-color: var(--gg-lin);
+        .gg-call-points li::before {
+            content: ""; position: absolute; left: 0; top: 1px; width: 20px; height: 20px;
+            border-radius: 50%; background: var(--gg-brume);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23588157' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+            background-size: 11px; background-position: center; background-repeat: no-repeat;
         }
-
-        /* ---- WhatsApp flottant ---- */
-        .whatsapp-float {
-            position: fixed; right: 20px; bottom: 20px; z-index: 60;
-            width: 58px; height: 58px; border-radius: 50%;
-            background: #25D366; display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 14px 32px rgba(26,47,35,.28);
-            transition: transform .2s;
-        }
-        .whatsapp-float:hover { transform: scale(1.07); }
-        .whatsapp-float img { width: 30px; height: 30px; }
     </style>
 </head>
 <body class="bg-[#FDFDFB] text-[#1A2F23] selection:bg-[#A3B18A] selection:text-white">
@@ -208,7 +205,7 @@
                 <a href="#secteur" class="text-sm font-bold uppercase tracking-wider hover:text-[#588157] transition-colors">Secteur</a>
                 <a href="#realisations" class="text-sm font-bold uppercase tracking-wider hover:text-[#588157] transition-colors">Réalisations</a>
                 <a href="#contact" class="text-sm font-bold uppercase tracking-wider hover:text-[#588157] transition-colors">Contact</a>
-                <a id="nav-phone" href="tel:0600000000" class="bg-[#344E41] text-white px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest hover:scale-105 transition-transform shadow-xl flex items-center gap-2">
+                <a id="nav-phone" href="tel:0647597465" class="bg-[#344E41] text-white px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest hover:scale-105 transition-transform shadow-xl flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     Devis gratuit
                 </a>
@@ -223,7 +220,7 @@
             <a href="#secteur" class="text-xl font-bold">Secteur</a>
             <a href="#realisations" class="text-xl font-bold">Réalisations</a>
             <a href="#contact" class="text-xl font-bold">Contact</a>
-            <a id="mobile-phone" href="tel:0600000000" class="bg-[#344E41] text-white p-5 rounded-2xl text-center font-bold">Appeler maintenant</a>
+            <a id="mobile-phone" href="tel:0647597465" class="bg-[#344E41] text-white p-5 rounded-2xl text-center font-bold">Appeler maintenant</a>
         </div>
     </nav>
 
@@ -375,64 +372,34 @@
                 <div class="lg:w-1/2 gg-reveal">
                     <p class="text-xs font-black uppercase tracking-[0.2em] text-[#A3B18A] mb-4">Contact</p>
                     <h2 class="text-5xl lg:text-6xl font-black mb-8 tracking-tighter">On commence <br/> quand ?</h2>
-                    <p class="text-xl text-white/60 mb-12 max-w-sm leading-relaxed">Décrivez votre projet et recevez une estimation gratuite dans les meilleurs délais.</p>
+                    <p class="text-xl text-white/60 mb-12 max-w-sm leading-relaxed">Le plus simple : un coup de fil. Décrivez votre projet et recevez une estimation gratuite dans les meilleurs délais.</p>
                     <div class="space-y-6">
-                        <a href="tel:0600000000" id="contact-phone-link" class="flex items-center gap-6 group">
+                        <a href="tel:0647597465" id="contact-phone-link" class="flex items-center gap-6 group">
                             <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-[#A3B18A] group-hover:text-[#1A2F23] transition-all">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                             </div>
                             <div>
                                 <p class="text-[10px] font-black uppercase tracking-widest text-white/40">Téléphone</p>
-                                <p id="contact-phone-display" class="text-lg font-bold">06 00 00 00 00</p>
-                            </div>
-                        </a>
-                        <a href="mailto:hello@guillaumegeysse.fr" id="contact-email-link" class="flex items-center gap-6 group">
-                            <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-[#A3B18A] group-hover:text-[#1A2F23] transition-all">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                            </div>
-                            <div>
-                                <p class="text-[10px] font-black uppercase tracking-widest text-white/40">Email</p>
-                                <p id="contact-email-display" class="text-lg font-bold">hello@guillaumegeysse.fr</p>
+                                <p id="contact-phone-display" class="text-lg font-bold">06 47 59 74 65</p>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="lg:w-1/2 bg-white rounded-[2.5rem] p-10 text-[#1A2F23] gg-reveal">
-                    <form id="contact-form" class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="gg-label" for="form-name">Prénom et nom *</label>
-                                <input id="form-name" name="name" type="text" placeholder="Ex : Marie Durand" autocomplete="name" required class="w-full bg-gray-50 rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all">
-                            </div>
-                            <div>
-                                <label class="gg-label" for="form-phone">Téléphone</label>
-                                <input id="form-phone" name="phone" type="tel" placeholder="06 12 34 56 78" autocomplete="tel" class="w-full bg-gray-50 rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="gg-label" for="form-email">Email *</label>
-                            <input id="form-email" name="email" type="email" placeholder="vous@exemple.fr" autocomplete="email" required class="w-full bg-gray-50 rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all">
-                        </div>
-                        <div>
-                            <label class="gg-label" for="form-service">Type de prestation</label>
-                            <select id="form-service" name="service" class="w-full bg-gray-50 rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all">
-                                <option>Élagage</option>
-                                <option>Débroussaillage</option>
-                                <option>Abattage</option>
-                                <option>Autre / je ne sais pas</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="gg-label" for="form-message">Détails du projet *</label>
-                            <textarea id="form-message" name="message" rows="4" placeholder="Décrivez le terrain, les arbres concernés, l'accès au chantier…" required class="w-full bg-gray-50 rounded-2xl p-4 text-[#1A2F23] focus:ring-2 focus:ring-[#A3B18A] outline-none transition-all"></textarea>
-                        </div>
-                        <p class="text-xs leading-relaxed text-gray-500">
-                            Les informations saisies servent uniquement à répondre à votre demande de devis. Elles sont envoyées par votre logiciel de messagerie et ne sont pas stockées par ce site. Consultez la <a href="politique-confidentialite.html" class="font-bold text-[#344E41] underline">politique de confidentialité</a>.
-                        </p>
-                        <button type="submit" class="w-full bg-[#344E41] text-white py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-[#344E41]/90 transition-all active:scale-95">
-                            Envoyer ma demande
-                        </button>
-                    </form>
+                    <div class="gg-call-card">
+                        <p class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">Devis gratuit par téléphone</p>
+                        <h3 class="text-2xl font-black mb-4 tracking-tight">Un appel suffit</h3>
+                        <p class="text-gray-500 leading-relaxed mb-8">Décrivez votre projet en quelques mots : type de terrain, arbres concernés, accès au chantier. Une visite sur place est ensuite organisée pour établir un devis gratuit et sans engagement.</p>
+                        <a id="contact-call-btn" href="tel:0647597465" class="gg-call-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span id="contact-call-number">06 47 59 74 65</span>
+                        </a>
+                        <ul class="gg-call-points">
+                            <li>Devis gratuit et sans engagement</li>
+                            <li>Réponse rapide, conseil direct</li>
+                            <li>Aucune donnée collectée par ce site</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -709,15 +676,14 @@
 
         function applyContact(fields) {
             const phone = getField(fields, "phone")
-            const email = getField(fields, "email")
-            document.getElementById("contact-phone-display").textContent = phone
-            document.getElementById("contact-email-display").textContent = email
+            if (!phone) return
             const tel = `tel:${phone.replace(/\s/g, "")}`
+            document.getElementById("contact-phone-display").textContent = phone
+            document.getElementById("contact-call-number").textContent = phone
             document.getElementById("nav-phone").href = tel
             document.getElementById("mobile-phone").href = tel
             document.getElementById("contact-phone-link").href = tel
-            document.getElementById("contact-email-link").href = `mailto:${email}`
-            document.getElementById("contact-form").dataset.recipient = email
+            document.getElementById("contact-call-btn").href = tel
         }
 
         function applySocial(fields) {
@@ -760,28 +726,6 @@
         loadContent()
 
         // ==============================
-        // FORMULAIRE (préparation d'email, aucun stockage)
-        // ==============================
-        document.getElementById("contact-form").addEventListener("submit", (event) => {
-            event.preventDefault()
-            const form = event.currentTarget
-            const formData = new FormData(form)
-            const recipient = form.dataset.recipient || "hello@guillaumegeysse.fr"
-            const subject = "Demande de devis depuis le site"
-            const body = [
-                `Nom : ${formData.get("name") || ""}`,
-                `Téléphone : ${formData.get("phone") || ""}`,
-                `Email : ${formData.get("email") || ""}`,
-                `Prestation : ${formData.get("service") || ""}`,
-                "",
-                "Message :",
-                formData.get("message") || ""
-            ].join("\n")
-
-            window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-        })
-
-        // ==============================
         // NAVBAR SCROLL
         // ==============================
         window.addEventListener('scroll', () => {
@@ -817,11 +761,5 @@
             })
         })
     </script>
-    <a href="https://wa.me/33788937661?text=Bonjour,%20je%20souhaite%20des%20informations"
-       class="whatsapp-float"
-       target="_blank" rel="noopener noreferrer"
-       aria-label="Contacter sur WhatsApp">
-       <img src="images/whatsapp-svgrepo-com.svg" alt="WhatsApp">
-    </a>
 </body>
 </html>
