@@ -92,13 +92,13 @@
           "id": "title",
           "label": "Titre de section",
           "type": "text",
-          "value": "Certifications"
+          "value": "Formation & compétences"
         },
         {
           "id": "intro",
           "label": "Texte d'introduction",
           "type": "text",
-          "value": "Des compétences vérifiées et des méthodes éprouvées, pour des interventions sûres qui respectent le végétal."
+          "value": "Une formation à la grimpe et des méthodes éprouvées, pour des interventions sûres qui respectent le végétal."
         },
         {
           "id": "talent1_title",
@@ -116,13 +116,13 @@
           "id": "talent2_title",
           "label": "Compétence 2 — Titre",
           "type": "text",
-          "value": "Grimpe et accès"
+          "value": "Attestation de grimpe"
         },
         {
           "id": "talent2_desc",
           "label": "Compétence 2 — Description",
           "type": "text",
-          "value": "Techniques de grimpe sur corde pour intervenir dans des zones difficiles d'accès en toute sécurité."
+          "value": "Attestation de grimpe niveau initial : techniques de grimpe et de déplacement sur corde pour intervenir dans les zones difficiles d'accès en sécurité."
         },
         {
           "id": "talent3_title",

@@ -12,6 +12,7 @@ légalement complet sans les informations réelles de l'entreprise.
 - Téléphone : 06 47 59 74 65 — Email : guillaume.geysse@gmail.com.
 - Nom de domaine : geysse-elagage.fr (canonique sans www).
 - Assurance RC professionnelle : zone de couverture d'environ 50 km autour de l'adresse administrative.
+- Formation : Attestation de grimpe niveau initial (seule qualification affichée sur le site).
 - Prise de contact exclusivement téléphonique : aucun formulaire, aucune collecte de données par le site.
 
 ## À compléter avant mise en ligne définitive
@@ -19,9 +20,10 @@ légalement complet sans les informations réelles de l'entreprise.
 - Assurance RC pro : nom de l'assureur, numéro de contrat, détail des garanties.
   Point à vérifier auprès de l'assureur : la couverture doit inclure explicitement
   l'élagage sur corde sans limitation de hauteur (certains contrats plafonnent à 5 m).
-- Certifications et qualifications : ne les afficher que si elles peuvent être prouvées.
-  La compétence 6 de la page d'accueil ne revendique plus d'assurance ni de qualification
-  tant que les justificatifs ne sont pas fournis.
+- Autres certifications éventuelles (CS Arboriste-Élagueur, CACES, secourisme...) :
+  ne les afficher que si elles peuvent être prouvées. À ce jour, seule l'attestation de grimpe niveau initial
+  est mentionnée. La section s'intitule "Formation & compétences" et non "Certifications",
+  pour ne rien revendiquer au-delà des justificatifs disponibles.
 - RCS/RM si une mention d'immatriculation spécifique est applicable.
 - Médiateur de la consommation désigné, obligatoire pour les litiges avec consommateurs.
 - Conditions commerciales réelles : durée de validité des devis, paiement, acompte, délais, rétractation.
