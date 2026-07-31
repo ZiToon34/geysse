@@ -1,9 +1,8 @@
-# --- Redirections : une seule URL canonique (sans www) ---
-[[redirects]]
-  from = "https://www.geysse-elagage.fr/*"
-  to = "https://geysse-elagage.fr/:splat"
-  status = 301
-  force = true
+# --- Domaine canonique ---
+# Domaine principal defini dans Netlify : geysse-elagage.fr (apex, sans www).
+# Netlify redirige deja automatiquement www.geysse-elagage.fr vers l'apex.
+# Ne pas ajouter ici de redirection dans le sens inverse (apex -> www) :
+# elle entrerait en conflit avec le domaine principal.
 
 # --- Page 404 ---
 [[redirects]]
