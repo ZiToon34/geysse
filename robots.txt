@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.guillaumegeysse.fr/sitemap.xml
+Sitemap: https://geysse-elagage.fr/sitemap.xml

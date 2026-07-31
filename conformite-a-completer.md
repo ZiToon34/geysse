@@ -1,32 +1,38 @@
 # Conformité à compléter avant publication
 
-Le site a été préparé pour limiter les risques RGPD et LCEN, mais il ne peut pas être légalement complet sans les informations réelles de l'entreprise.
+Le site a été préparé pour limiter les risques RGPD et LCEN, mais il ne peut pas être
+légalement complet sans les informations réelles de l'entreprise.
 
-Renseigné le 29 juin 2026 :
+## Renseigné
 
 - Identité légale de l'éditeur : GEYSSE Guillaume, entrepreneur individuel.
 - Adresse administrative : Mas de Figuières, 34520 La Vacquerie-et-Saint-Martin-de-Castries.
-- SIREN : 897 588 182.
-- SIRET : 897 588 182 00021.
-- TVA intracommunautaire : FR35 897 588 182.
+- SIREN : 897 588 182 — SIRET : 897 588 182 00021 — TVA : FR35 897 588 182.
 - Responsable de publication : Larzac Numeric et GEYSSE Guillaume.
-- Prestataires techniques déclarés : Vercel, Netlify, GitHub, Firebase / Google, Gmail / Google.
+- Téléphone : 06 47 59 74 65 — Email : guillaume.geysse@gmail.com.
+- Nom de domaine : geysse-elagage.fr (canonique sans www).
+- Assurance RC professionnelle : zone de couverture d'environ 50 km autour de l'adresse administrative.
+- Prise de contact exclusivement téléphonique : aucun formulaire, aucune collecte de données par le site.
 
-À compléter avant mise en ligne définitive :
+## À compléter avant mise en ligne définitive
 
-- Hébergeur principal réellement utilisé par le domaine public final.
+- Assurance RC pro : nom de l'assureur, numéro de contrat, détail des garanties.
+  Point à vérifier auprès de l'assureur : la couverture doit inclure explicitement
+  l'élagage sur corde sans limitation de hauteur (certains contrats plafonnent à 5 m).
+- Certifications et qualifications : ne les afficher que si elles peuvent être prouvées.
+  La compétence 6 de la page d'accueil ne revendique plus d'assurance ni de qualification
+  tant que les justificatifs ne sont pas fournis.
 - RCS/RM si une mention d'immatriculation spécifique est applicable.
-- Assurance responsabilité civile professionnelle : assureur, garanties utiles, zone de couverture.
-- Certifications ou qualifications : ne les afficher que si elles peuvent être prouvées.
 - Médiateur de la consommation désigné, obligatoire pour les litiges avec consommateurs.
 - Conditions commerciales réelles : durée de validité des devis, paiement, acompte, délais, rétractation.
-- Sous-traitants supplémentaires éventuels : expert-comptable, outils métier, CRM, agenda, facturation.
+- Hébergeur principal réellement utilisé (les mentions légales listent plusieurs prestataires possibles).
+- Liens réseaux sociaux : encore à "#" dans content.json ; à renseigner pour activer
+  le champ sameAs du JSON-LD.
 
-Points techniques déjà traités :
+## Points techniques traités
 
 - Suppression des appels navigateur à Google Fonts, Tailwind CDN, Pravatar et proxy CMS externe.
-- Chargement du contenu et des images depuis le dépôt local.
-- Ajout d'une politique de confidentialité, d'une page cookies, de mentions légales et de conditions générales.
-- Ajout d'une mention d'information RGPD sous le formulaire.
-- Formulaire converti en préparation d'email sans stockage par le site.
-- Ajout d'en-têtes Netlify de sécurité et de confidentialité.
+- Carte Google Maps chargée uniquement après consentement explicite du visiteur.
+- Formulaire de contact et bouton WhatsApp retirés : contact téléphonique uniquement.
+- En-têtes Netlify de sécurité (CSP, HSTS, X-Frame-Options) et politique de cache.
+- Redirection 301 de www vers le domaine canonique sans www.

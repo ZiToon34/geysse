@@ -32,7 +32,7 @@
           "id": "photo",
           "label": "Photo principale",
           "type": "image",
-          "value": "560460957_122154674900839679_870784505987278401_n.jpg"
+          "value": "elagage-grimpeur-sur-corde-larzac.webp"
         }
       ]
     },
@@ -164,13 +164,13 @@
           "id": "talent6_title",
           "label": "Compétence 6 — Titre",
           "type": "text",
-          "value": "Documents vérifiés"
+          "value": "Matériel contrôlé"
         },
         {
           "id": "talent6_desc",
           "label": "Compétence 6 — Description",
           "type": "text",
-          "value": "Assurance responsabilité civile professionnelle et qualifications à jour pour chaque chantier."
+          "value": "Équipements de grimpe et de coupe vérifiés régulièrement, entretenus et conformes aux normes de sécurité en vigueur."
         }
       ]
     },
@@ -303,11 +303,11 @@
           "label": "Photos de réalisations",
           "type": "image-list",
           "value": [
-            "560460957_122154674900839679_870784505987278401_n.jpg",
-            "625543055_122180658884839679_3958453432057004025_n.jpg",
-            "631290472_122181384848839679_8138035740000800874_n.jpg",
-            "652901870_122186436188839679_8440892397307877320_n.jpg",
-            "729437710_122200663988839679_1940932716784316578_n.jpg"
+            "elagage-grimpeur-sur-corde-larzac.webp",
+            "elagage-taille-arbre-herault.webp",
+            "abattage-demontage-arbre-cevennes.webp",
+            "debroussaillage-terrain-larzac.webp",
+            "elagage-chantier-lodeve.webp"
           ]
         }
       ]
@@ -344,7 +344,7 @@
           "id": "facebook",
           "label": "Lien Facebook",
           "type": "text",
-          "value": "#"
+          "value": "https://www.facebook.com/profile.php?id=61575190376907"
         },
         {
           "id": "linkedin",
