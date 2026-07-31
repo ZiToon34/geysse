@@ -11,7 +11,14 @@ légalement complet sans les informations réelles de l'entreprise.
 - Responsable de publication : Larzac Numeric et GEYSSE Guillaume.
 - Téléphone : 06 47 59 74 65 — Email : guillaume.geysse@gmail.com.
 - Nom de domaine : geysse-elagage.fr (canonique sans www).
+- Immatriculation : RNE (le Répertoire des Métiers a été supprimé au 01/01/2023).
+  Reste à vérifier sur l'extrait RNE si la mention "entreprise relevant du secteur
+  des métiers et de l'artisanat" figure : si oui, elle peut être ajoutée aux mentions légales.
 - Assurance RC professionnelle : zone de couverture d'environ 50 km autour de l'adresse administrative.
+- Conditions commerciales : devis gratuits valables 2 mois, aucun acompte, paiement par virement,
+  chèque ou espèces à l'issue de la prestation, délai d'intervention de 15 jours à 1 mois.
+- Droit de rétractation : 14 jours (contrats hors établissement). Le délai d'intervention étant
+  supérieur, les travaux commencent normalement après expiration du délai.
 - Formation : Attestation de grimpe niveau initial (seule qualification affichée sur le site).
 - Prise de contact exclusivement téléphonique : aucun formulaire, aucune collecte de données par le site.
 
@@ -24,9 +31,9 @@ légalement complet sans les informations réelles de l'entreprise.
   ne les afficher que si elles peuvent être prouvées. À ce jour, seule l'attestation de grimpe niveau initial
   est mentionnée. La section s'intitule "Formation & compétences" et non "Certifications",
   pour ne rien revendiquer au-delà des justificatifs disponibles.
-- RCS/RM si une mention d'immatriculation spécifique est applicable.
 - Médiateur de la consommation désigné, obligatoire pour les litiges avec consommateurs.
-- Conditions commerciales réelles : durée de validité des devis, paiement, acompte, délais, rétractation.
+- Joindre le formulaire de rétractation à chaque devis signé au domicile du client
+  (obligation légale pour les contrats hors établissement).
 - Hébergeur principal réellement utilisé (les mentions légales listent plusieurs prestataires possibles).
 - Liens réseaux sociaux : encore à "#" dans content.json ; à renseigner pour activer
   le champ sameAs du JSON-LD.
