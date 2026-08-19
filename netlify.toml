@@ -10,22 +10,24 @@
   to = "/404.html"
   status = 404
 
-# --- Sécurité (toutes les pages) ---
+# --- Securite (toutes les pages) ---
+# frame-ancestors autorise l'affichage du site dans l'apercu de Mon CMS,
+# tout en le bloquant pour tout autre site (protection anti-clickjacking).
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; frame-src https://www.google.com; base-uri 'self'; frame-ancestors 'none'; form-action 'self'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; frame-src https://www.google.com; base-uri 'self'; frame-ancestors 'self' https://mon-cms-mnrd.vercel.app; form-action 'self'"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 
-# --- HTML : revalidation à chaque visite, contenu toujours à jour ---
+# --- HTML : revalidation a chaque visite, contenu toujours a jour ---
 [[headers]]
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# --- content.json : jamais mis en cache (édité via le CMS) ---
+# --- content.json : jamais mis en cache (edite via le CMS) ---
 [[headers]]
   for = "/content.json"
   [headers.values]
