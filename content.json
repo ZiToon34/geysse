@@ -50,7 +50,7 @@
           "id": "service1_desc",
           "label": "Service 1 — Description",
           "type": "text",
-          "value": "Nettoyage complet de terrains et parcelles, quelle que soit leur taille ou leur pente : prévention incendie et respect des obligations légales de débroussaillement."
+          "value": "Nettoyage complet de terrains et parcelles, quelle que soit leur taille ou leur pente : prévention incendie et respect des obligations légales de débroussaillement. (Old)"
         },
         {
           "id": "service2_title",
