@@ -33,6 +33,48 @@
           "label": "Photo principale",
           "type": "image",
           "value": "elagage-grimpeur-sur-corde-larzac.webp"
+        },
+        {
+          "id": "title_line1",
+          "label": "Titre — 1re ligne",
+          "type": "text",
+          "value": "L'art de la"
+        },
+        {
+          "id": "mission_label",
+          "label": "Étiquette au-dessus de la mission",
+          "type": "text",
+          "value": "Dernière mission"
+        },
+        {
+          "id": "btn_devis",
+          "label": "Bouton principal",
+          "type": "text",
+          "value": "Demander un devis"
+        },
+        {
+          "id": "btn_galerie",
+          "label": "Lien secondaire",
+          "type": "text",
+          "value": "Voir les réalisations →"
+        },
+        {
+          "id": "trust1",
+          "label": "Argument 1",
+          "type": "text",
+          "value": "Devis gratuit et sans engagement"
+        },
+        {
+          "id": "trust2",
+          "label": "Argument 2",
+          "type": "text",
+          "value": "Au sol ou sur corde"
+        },
+        {
+          "id": "trust3",
+          "label": "Argument 3",
+          "type": "text",
+          "value": "Larzac, Cévennes et alentours"
         }
       ]
     },
@@ -50,7 +92,7 @@
           "id": "service1_desc",
           "label": "Service 1 — Description",
           "type": "text",
-          "value": "Nettoyage complet de terrains et parcelles, quelle que soit leur taille ou leur pente : prévention incendie et respect des obligations légales de débroussaillement. (Old)"
+          "value": "Nettoyage complet de terrains et parcelles, quelle que soit leur taille ou leur pente : prévention incendie et respect des obligations légales de débroussaillement."
         },
         {
           "id": "service2_title",
@@ -74,7 +116,25 @@
           "id": "service3_desc",
           "label": "Service 3 — Description",
           "type": "text",
-          "value": "Abattage et démontage d’arbres, devenu trop dangereux ou pour autres demande "
+          "value": "Abattage contrôlé et démontage avec techniques de rigging, même en zones difficiles d'accès ou à proximité des habitations."
+        },
+        {
+          "id": "eyebrow",
+          "label": "Petit texte au-dessus",
+          "type": "text",
+          "value": "Savoir-faire"
+        },
+        {
+          "id": "title",
+          "label": "Titre de la section",
+          "type": "text",
+          "value": "Services spécialisés"
+        },
+        {
+          "id": "intro",
+          "label": "Texte d'introduction",
+          "type": "text",
+          "value": "Une approche respectueuse de l'environnement et de la biologie de l'arbre, adaptée à chaque terrain."
         }
       ]
     },
@@ -306,17 +366,32 @@
             "elagage-grimpeur-sur-corde-larzac.webp",
             "elagage-taille-arbre-herault.webp",
             "abattage-demontage-arbre-cevennes.webp",
-            "elagage-chantier-lodeve.webp",
-            "img-1701-1787152493919.jpg",
-            "img-2276-1787152540097.jpg",
-            "img-2178-1787152580542.jpg",
-            "img-1955-1787152609924.jpg",
-            "97c04139-d470-4154-ad30-9cd0b852e1c9-1787152627602.jpg",
-            "218ff77f-995f-429f-900d-9a73af5e2eb2-1787152723780.jpg",
-            "img-2324-1787152838219.jpg",
-            "img-2325-1787152842477.jpg",
-            "img-2326-1787152848527.jpg"
+            "elagage-chantier-lodeve.webp"
           ]
+        },
+        {
+          "id": "eyebrow",
+          "label": "Petit texte au-dessus",
+          "type": "text",
+          "value": "Sur le terrain"
+        },
+        {
+          "id": "title",
+          "label": "Titre de la section",
+          "type": "text",
+          "value": "Réalisations"
+        },
+        {
+          "id": "intro",
+          "label": "Texte d'introduction",
+          "type": "text",
+          "value": "Chaque projet est unique, chaque arbre raconte une histoire. Cliquez sur une photo pour l'agrandir."
+        },
+        {
+          "id": "vide",
+          "label": "Message si aucune photo",
+          "type": "text",
+          "value": "Aucune photo pour le moment."
         }
       ]
     },
@@ -335,6 +410,67 @@
           "label": "Email",
           "type": "text",
           "value": "guillaume.geysse@gmail.com"
+        },
+        {
+          "id": "eyebrow",
+          "label": "Petit texte au-dessus",
+          "type": "text",
+          "value": "Contact"
+        },
+        {
+          "id": "title",
+          "label": "Titre de la section",
+          "type": "text",
+          "value": "On commence quand ?"
+        },
+        {
+          "id": "intro",
+          "label": "Texte d'introduction",
+          "type": "text",
+          "value": "Le plus simple : un coup de fil. Décrivez votre projet et recevez une estimation gratuite dans les meilleurs délais."
+        },
+        {
+          "id": "phone_label",
+          "label": "Étiquette du téléphone",
+          "type": "text",
+          "value": "Téléphone"
+        },
+        {
+          "id": "carte_eyebrow",
+          "label": "Encadré — Petit texte",
+          "type": "text",
+          "value": "Devis gratuit par téléphone"
+        },
+        {
+          "id": "carte_title",
+          "label": "Encadré — Titre",
+          "type": "text",
+          "value": "Un appel suffit"
+        },
+        {
+          "id": "carte_text",
+          "label": "Encadré — Texte",
+          "type": "text",
+          "value": "Décrivez votre projet en quelques mots : type de terrain, arbres concernés, accès au chantier. Une visite sur place est ensuite organisée pour établir un devis gratuit et sans engagement."
+        },
+        {
+          "id": "carte_points",
+          "label": "Encadré — Points forts",
+          "type": "liste",
+          "value": [
+            {
+              "label": "Devis gratuit et sans engagement",
+              "valeur": ""
+            },
+            {
+              "label": "Réponse rapide, conseil direct",
+              "valeur": ""
+            },
+            {
+              "label": "Aucune donnée collectée par ce site",
+              "valeur": ""
+            }
+          ]
         }
       ]
     },
@@ -359,6 +495,453 @@
           "label": "Lien LinkedIn",
           "type": "text",
           "value": "#"
+        }
+      ]
+    },
+    {
+      "id": "footer",
+      "label": "Pied de page",
+      "fields": [
+        {
+          "id": "nom",
+          "label": "Nom affiché",
+          "type": "text",
+          "value": "Guillaume Geysse"
+        },
+        {
+          "id": "description",
+          "label": "Description",
+          "type": "text",
+          "value": "Élagage, débroussaillage et abattage contrôlé sur le Larzac, les Cévennes et alentours. Interventions au sol ou sur corde."
+        }
+      ]
+    },
+    {
+      "id": "page_elagage",
+      "label": "Page Élagage",
+      "fields": [
+        {
+          "id": "eyebrow",
+          "label": "Petit texte au-dessus du titre",
+          "type": "text",
+          "value": "Taille raisonnée, au sol ou sur corde"
+        },
+        {
+          "id": "title",
+          "label": "Titre de la page",
+          "type": "text",
+          "value": "Élagage et taille d'arbres"
+        },
+        {
+          "id": "intro",
+          "label": "Texte d'introduction",
+          "type": "text",
+          "value": "Un arbre bien taillé est un arbre en bonne santé, sûr pour votre habitation et agréable à vivre. J'interviens au sol ou sur corde, selon la configuration du terrain, avec une taille raisonnée qui respecte la biologie de l'arbre — autour de Lodève, du Larzac, des Cévennes et des communes voisines."
+        },
+        {
+          "id": "btn",
+          "label": "Bouton d'appel",
+          "type": "text",
+          "value": "Appeler pour un devis gratuit"
+        },
+        {
+          "id": "h2_1",
+          "label": "Titre de section 1",
+          "type": "text",
+          "value": "Pourquoi faire élaguer vos arbres ?"
+        },
+        {
+          "id": "h2_2",
+          "label": "Titre de section 2",
+          "type": "text",
+          "value": "Les types de taille proposés"
+        },
+        {
+          "id": "h2_3",
+          "label": "Titre de section 3",
+          "type": "text",
+          "value": "Comment se déroule l'intervention ?"
+        },
+        {
+          "id": "h2_4",
+          "label": "Titre de section 4",
+          "type": "text",
+          "value": "Questions fréquentes"
+        },
+        {
+          "id": "h2_5",
+          "label": "Titre de section 5",
+          "type": "text",
+          "value": "Un projet de taille ou d'élagage ?"
+        },
+        {
+          "id": "h2_6",
+          "label": "Titre de section 6",
+          "type": "text",
+          "value": "Découvrez aussi"
+        },
+        {
+          "id": "puces",
+          "label": "Points clés",
+          "type": "liste",
+          "value": [
+            {
+              "label": "Sécuriser",
+              "valeur": "supprimer les bois morts et les branches fragilisées avant qu'ils ne tombent sur une toiture, une voiture ou une personne."
+            },
+            {
+              "label": "Préserver la santé de l'arbre",
+              "valeur": "une taille raisonnée, adaptée à l'essence et à la saison, évite les plaies inutiles et prolonge la vie de l'arbre."
+            },
+            {
+              "label": "Dégager les bâtiments et les accès",
+              "valeur": "façades, toitures, gouttières, allées, fils et clôtures retrouvent l'espace nécessaire."
+            },
+            {
+              "label": "Redonner de la lumière",
+              "valeur": "une couronne éclaircie laisse passer le soleil dans le jardin et jusqu'aux fenêtres."
+            },
+            {
+              "label": "Respecter le voisinage",
+              "valeur": "les branches qui dépassent chez le voisin peuvent créer des litiges ; une taille de dégagement les évite."
+            }
+          ]
+        },
+        {
+          "id": "etapes",
+          "label": "Étapes de l'intervention",
+          "type": "liste",
+          "value": [
+            {
+              "label": "Premier contact",
+              "valeur": "Un simple appel téléphonique suffit : décrivez votre projet en quelques mots — type de terrain, arbres concernés, accès au chantier."
+            },
+            {
+              "label": "Visite et devis gratuit",
+              "valeur": "Une visite sur place permet d'évaluer précisément le travail : hauteur et état des arbres, contraintes d'accès, gestion des branches coupées. Le devis est gratuit et sans engagement."
+            },
+            {
+              "label": "Intervention sécurisée",
+              "valeur": "Zone balisée, équipements de protection, techniques de grimpe sécurisées : chaque coupe est réfléchie pour l'arbre comme pour les personnes et les biens alentour."
+            },
+            {
+              "label": "Chantier propre",
+              "valeur": "Les branches sont billonnées, broyées ou évacuées selon ce qui est prévu au devis. Le terrain est rendu propre."
+            }
+          ]
+        },
+        {
+          "id": "faq",
+          "label": "Questions fréquentes",
+          "type": "liste",
+          "value": [
+            {
+              "label": "Combien coûte un élagage ?",
+              "valeur": "Le prix dépend de la hauteur de l'arbre, de son état, de l'accès au chantier et de la gestion des branches coupées. C'est pourquoi chaque intervention fait l'objet d'un devis gratuit après visite sur place."
+            },
+            {
+              "label": "Quelle est la meilleure période pour élaguer ?",
+              "valeur": "Cela dépend de l'essence et de l'objectif de la taille. De manière générale, on évite les périodes de forte montée de sève et la pleine saison de nidification des oiseaux au printemps. La période idéale est définie ensemble lors du devis."
+            },
+            {
+              "label": "Que deviennent les branches coupées ?",
+              "valeur": "Selon votre choix au devis : laissées billonnées sur place (bois de chauffage), broyées, ou évacuées. Le chantier est rendu propre dans tous les cas."
+            },
+            {
+              "label": "Grimpe sur corde ou nacelle ?",
+              "valeur": "La grimpe sur corde permet d'atteindre presque tous les arbres, y compris sur terrains pentus ou étroits, sans engin lourd et sans abîmer votre jardin. C'est la technique privilégiée sur les terrains du Larzac et des Cévennes."
+            },
+            {
+              "label": "Les branches du voisin dépassent chez moi, que faire ?",
+              "valeur": "Le Code civil permet d'exiger que le propriétaire de l'arbre coupe les branches qui avancent sur votre terrain. Le plus simple reste un accord amiable, avec une taille de dégagement propre réalisée par un professionnel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "page_debroussaillage",
+      "label": "Page Débroussaillage",
+      "fields": [
+        {
+          "id": "eyebrow",
+          "label": "Petit texte au-dessus du titre",
+          "type": "text",
+          "value": "Prévention incendie & entretien de terrains"
+        },
+        {
+          "id": "title",
+          "label": "Titre de la page",
+          "type": "text",
+          "value": "Débroussaillage de terrains et parcelles"
+        },
+        {
+          "id": "intro",
+          "label": "Texte d'introduction",
+          "type": "text",
+          "value": "Terrain envahi, sous-bois impraticable, obligation légale de débroussaillement à respecter avant l'été ? J'interviens sur tous types de terrains — plats, pentus, encombrés — autour de Lodève, du Larzac et des Cévennes, pour un débroussaillage complet et durable."
+        },
+        {
+          "id": "btn",
+          "label": "Bouton d'appel",
+          "type": "text",
+          "value": "Appeler pour un devis gratuit"
+        },
+        {
+          "id": "h2_1",
+          "label": "Titre de section 1",
+          "type": "text",
+          "value": "Pourquoi débroussailler ?"
+        },
+        {
+          "id": "h2_2",
+          "label": "Titre de section 2",
+          "type": "text",
+          "value": "Ce que comprend la prestation"
+        },
+        {
+          "id": "h2_3",
+          "label": "Titre de section 3",
+          "type": "text",
+          "value": "Comment se déroule l'intervention ?"
+        },
+        {
+          "id": "h2_4",
+          "label": "Titre de section 4",
+          "type": "text",
+          "value": "Questions fréquentes"
+        },
+        {
+          "id": "h2_5",
+          "label": "Titre de section 5",
+          "type": "text",
+          "value": "Un projet de débroussaillage ?"
+        },
+        {
+          "id": "h2_6",
+          "label": "Titre de section 6",
+          "type": "text",
+          "value": "Découvrez aussi"
+        },
+        {
+          "id": "puces",
+          "label": "Points clés",
+          "type": "liste",
+          "value": [
+            {
+              "label": "Protéger contre l'incendie",
+              "valeur": "dans nos garrigues et forêts méditerranéennes, un terrain débroussaillé ralentit la propagation du feu et protège votre habitation."
+            },
+            {
+              "label": "Respecter la loi",
+              "valeur": "dans les zones exposées de l'Hérault, le débroussaillement est une obligation légale (OLD) autour des constructions, à la charge du propriétaire."
+            },
+            {
+              "label": "Rendre le terrain utilisable",
+              "valeur": "retrouver un jardin, un accès, une parcelle exploitable ou simplement un terrain agréable à parcourir."
+            },
+            {
+              "label": "Préserver la végétation utile",
+              "valeur": "un débroussaillage sélectif conserve les beaux sujets et met en valeur les arbres que vous souhaitez garder."
+            },
+            {
+              "label": "Valoriser votre bien",
+              "valeur": "un terrain entretenu, c'est une propriété qui gagne en sécurité comme en valeur."
+            }
+          ]
+        },
+        {
+          "id": "etapes",
+          "label": "Étapes de l'intervention",
+          "type": "liste",
+          "value": [
+            {
+              "label": "Premier contact",
+              "valeur": "Un simple appel téléphonique suffit : décrivez votre projet en quelques mots — type de terrain, arbres concernés, accès au chantier."
+            },
+            {
+              "label": "Visite et devis gratuit",
+              "valeur": "Une visite sur place permet d'évaluer précisément le travail : surface, pente, densité de la végétation, gestion des végétaux coupés. Le devis est gratuit et sans engagement."
+            },
+            {
+              "label": "Intervention sécurisée",
+              "valeur": "Le débroussaillage est réalisé avec un matériel adapté au terrain, en préservant les arbres et plantations que vous souhaitez conserver."
+            },
+            {
+              "label": "Chantier propre",
+              "valeur": "Les végétaux coupés sont broyés, mis en tas ou évacués selon le devis. Vous retrouvez un terrain net et praticable."
+            }
+          ]
+        },
+        {
+          "id": "faq",
+          "label": "Questions fréquentes",
+          "type": "liste",
+          "value": [
+            {
+              "label": "Suis-je concerné par l'obligation légale de débroussaillement (OLD) ?",
+              "valeur": "Dans l'Hérault, de nombreuses communes proches de zones boisées ou de garrigues sont concernées : le débroussaillement est alors obligatoire autour des constructions, généralement dans un rayon de 50 mètres. Votre mairie ou la préfecture de l'Hérault peut vous confirmer les règles exactes applicables à votre parcelle — et je peux vous aider à faire le point lors de la visite de devis."
+            },
+            {
+              "label": "Quelle est la meilleure période pour débroussailler ?",
+              "valeur": "L'idéal est d'intervenir avant l'été, pour que le terrain soit en règle et sécurisé avant la saison des incendies. Un débroussaillage se planifie donc de préférence entre l'automne et le printemps."
+            },
+            {
+              "label": "Combien coûte un débroussaillage ?",
+              "valeur": "Le prix dépend de la surface, de la pente, de la densité de la végétation et du devenir des végétaux coupés. Chaque terrain étant différent, une visite sur place permet d'établir un devis gratuit et précis."
+            },
+            {
+              "label": "Que deviennent les végétaux coupés ?",
+              "valeur": "Selon votre choix : broyage sur place (le broyat protège les sols), mise en tas, ou évacuation. Le brûlage des déchets verts est très encadré et souvent interdit ; les solutions proposées respectent la réglementation."
+            },
+            {
+              "label": "Intervenez-vous sur les terrains en pente ou difficiles d'accès ?",
+              "valeur": "Oui. Les terrains pentus, encombrés ou inaccessibles aux engins font partie du quotidien sur le Larzac et dans les Cévennes : le matériel et la méthode sont adaptés à chaque configuration."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "page_abattage",
+      "label": "Page Abattage",
+      "fields": [
+        {
+          "id": "eyebrow",
+          "label": "Petit texte au-dessus du titre",
+          "type": "text",
+          "value": "Démontage & rigging en zones contraintes"
+        },
+        {
+          "id": "title",
+          "label": "Titre de la page",
+          "type": "text",
+          "value": "Abattage d'arbres contrôlé"
+        },
+        {
+          "id": "intro",
+          "label": "Texte d'introduction",
+          "type": "text",
+          "value": "Un arbre mort, malade, dangereux ou simplement trop proche de la maison ? Quand la taille ne suffit plus, l'abattage contrôlé permet de le retirer en toute sécurité — même coincé entre deux bâtiments ou au-dessus d'une toiture, grâce aux techniques de démontage et de rigging."
+        },
+        {
+          "id": "btn",
+          "label": "Bouton d'appel",
+          "type": "text",
+          "value": "Appeler pour un devis gratuit"
+        },
+        {
+          "id": "h2_1",
+          "label": "Titre de section 1",
+          "type": "text",
+          "value": "Quand faut-il abattre un arbre ?"
+        },
+        {
+          "id": "h2_2",
+          "label": "Titre de section 2",
+          "type": "text",
+          "value": "Les techniques utilisées"
+        },
+        {
+          "id": "h2_3",
+          "label": "Titre de section 3",
+          "type": "text",
+          "value": "Comment se déroule l'intervention ?"
+        },
+        {
+          "id": "h2_4",
+          "label": "Titre de section 4",
+          "type": "text",
+          "value": "Questions fréquentes"
+        },
+        {
+          "id": "h2_5",
+          "label": "Titre de section 5",
+          "type": "text",
+          "value": "Un projet de abattage ?"
+        },
+        {
+          "id": "h2_6",
+          "label": "Titre de section 6",
+          "type": "text",
+          "value": "Découvrez aussi"
+        },
+        {
+          "id": "puces",
+          "label": "Points clés",
+          "type": "liste",
+          "value": [
+            {
+              "label": "Arbre mort ou dépérissant",
+              "valeur": "un arbre mort devient imprévisible : ses branches et son tronc peuvent céder à tout moment."
+            },
+            {
+              "label": "Arbre dangereux",
+              "valeur": "penché, fissuré, déraciné partiellement après une tempête, ou fragilisé par une maladie ou des champignons."
+            },
+            {
+              "label": "Trop proche des constructions",
+              "valeur": "racines qui menacent les fondations, branches sur la toiture, ombre permanente sur l'habitation."
+            },
+            {
+              "label": "Projet d'aménagement",
+              "valeur": "libérer l'emplacement d'une construction, d'un accès ou d'une plantation nouvelle."
+            },
+            {
+              "label": "Après un sinistre",
+              "valeur": "arbre tombé ou déstabilisé par le vent, la neige ou la foudre, à sécuriser rapidement."
+            }
+          ]
+        },
+        {
+          "id": "etapes",
+          "label": "Étapes de l'intervention",
+          "type": "liste",
+          "value": [
+            {
+              "label": "Premier contact",
+              "valeur": "Un simple appel téléphonique suffit : décrivez votre projet en quelques mots — type de terrain, arbres concernés, accès au chantier."
+            },
+            {
+              "label": "Visite et devis gratuit",
+              "valeur": "Une visite sur place permet d'évaluer précisément le travail : état de l'arbre, environnement immédiat (bâtiments, lignes, accès), technique adaptée et devenir du bois. Le devis est gratuit et sans engagement."
+            },
+            {
+              "label": "Intervention sécurisée",
+              "valeur": "Selon la configuration : abattage directionnel ou démontage par sections avec rétention des charges. Chaque étape est sécurisée pour les personnes comme pour les biens."
+            },
+            {
+              "label": "Chantier propre",
+              "valeur": "Le bois est billonné, broyé ou évacué selon le devis. La zone est nettoyée et rendue sûre."
+            }
+          ]
+        },
+        {
+          "id": "faq",
+          "label": "Questions fréquentes",
+          "type": "liste",
+          "value": [
+            {
+              "label": "Faut-il une autorisation pour abattre un arbre ?",
+              "valeur": "Dans la plupart des cas non, mais certains arbres sont protégés : espaces boisés classés, sites protégés, règles locales d'urbanisme ou arbres remarquables. Un point rapide auprès de votre mairie permet de vérifier ; nous pouvons en parler lors de la visite de devis."
+            },
+            {
+              "label": "Combien coûte un abattage ?",
+              "valeur": "Le prix dépend de la taille de l'arbre, de son état, de son environnement (bâtiments, lignes, accès) et de la technique nécessaire. Un démontage avec rigging demande plus de temps qu'un abattage simple. Le devis, gratuit, est établi après visite sur place."
+            },
+            {
+              "label": "Peut-on abattre un arbre coincé entre deux maisons ?",
+              "valeur": "Oui, c'est précisément l'intérêt du démontage par sections avec rigging : l'arbre est découpé depuis la cime et chaque morceau est descendu au sol en douceur, sans toucher les constructions."
+            },
+            {
+              "label": "Puis-je garder le bois ?",
+              "valeur": "Bien sûr. Le bois peut être billonné sur place en longueurs adaptées au bois de chauffage. Le broyage ou l'évacuation sont aussi possibles, selon votre préférence."
+            },
+            {
+              "label": "Et la souche ?",
+              "valeur": "La souche est coupée au plus près du sol. Son devenir (conservation, traitement ou extraction par un prestataire équipé) est abordé lors du devis en fonction de votre projet."
+            }
+          ]
         }
       ]
     }

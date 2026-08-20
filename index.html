@@ -343,17 +343,15 @@
                 <div class="lg:w-1/2">
                     <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#A3B18A]/20 text-[#344E41] rounded-full text-xs font-bold uppercase tracking-widest mb-8">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
-                        <span id="hero-badge">Élagueur-grimpeur — Larzac & Cévennes</span>
+                        <span id="hero-badge" data-cms-zone="hero.badge">Élagueur-grimpeur — Larzac & Cévennes</span>
                     </div>
                     <h1 class="text-5xl lg:text-7xl font-black leading-[0.95] mb-8 tracking-tighter text-[#1A2F23]">
-                        L'art de la <br/> <span id="hero-title" class="text-[#588157]">taille raisonnée</span>.
+                        <span data-cms-text="hero.title_line1">L'art de la</span> <br/> <span id="hero-title" class="text-[#588157]" data-cms-zone="hero.title">taille raisonnée</span>.
                     </h1>
-                    <p id="hero-subtitle" class="text-lg lg:text-xl text-gray-500 mb-10 max-w-lg leading-relaxed font-medium">Élagage, débroussaillage et abattage contrôlé, au sol ou sur corde. Des interventions soignées, sécurisées et accessibles à tous les budgets, autour de Lodève, du Larzac et des Cévennes.</p>
+                    <p id="hero-subtitle" data-cms-zone="hero.subtitle" class="text-lg lg:text-xl text-gray-500 mb-10 max-w-lg leading-relaxed font-medium">Élagage, débroussaillage et abattage contrôlé, au sol ou sur corde. Des interventions soignées, sécurisées et accessibles à tous les budgets, autour de Lodève, du Larzac et des Cévennes.</p>
                     <div class="flex flex-wrap gap-4 items-center">
-                        <a href="#contact" class="px-10 py-5 bg-[#344E41] text-white rounded-full font-black text-sm uppercase tracking-widest hover:shadow-2xl hover:shadow-[#344E41]/30 transition-all transform hover:-translate-y-1 inline-block text-center">
-                            Demander un devis
-                        </a>
-                        <a href="#realisations" class="text-sm font-bold text-[#344E41] hover:text-[#588157] transition-colors">Voir les réalisations →</a>
+                        <a href="#contact" class="px-10 py-5 bg-[#344E41] text-white rounded-full font-black text-sm uppercase tracking-widest hover:shadow-2xl hover:shadow-[#344E41]/30 transition-all transform hover:-translate-y-1 inline-block text-center" data-cms-text="hero.btn_devis">Demander un devis</a>
+                        <a href="#realisations" class="text-sm font-bold text-[#344E41] hover:text-[#588157] transition-colors" data-cms-text="hero.btn_galerie">Voir les réalisations →</a>
                     </div>
                     <div class="gg-trust">
                         <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Devis gratuit et sans engagement</span>
@@ -363,13 +361,13 @@
                 </div>
                 <div class="lg:w-1/2 relative">
                     <div class="relative rounded-[3rem] overflow-hidden shadow-2xl" style="aspect-ratio: 4/5; max-height: 600px;">
-                        <img id="hero-photo" src="images/elagage-grimpeur-sur-corde-larzac.webp"
+                        <img id="hero-photo" data-cms-zone="hero.photo" src="images/elagage-grimpeur-sur-corde-larzac.webp"
                             alt="Guillaume Geysse, élagueur-grimpeur, en intervention sur corde dans un arbre sur le Larzac"
                             width="720" height="960" fetchpriority="high" decoding="async"
                             style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
                         <div class="absolute bottom-8 left-8 right-8 glass-card p-6 rounded-3xl text-white">
-                            <p class="text-sm font-bold opacity-80 uppercase mb-1">Dernière mission</p>
-                            <p id="hero-mission" class="text-xl font-bold">Saint Maurice-Navacelles — Élagage complet</p>
+                            <p class="text-sm font-bold opacity-80 uppercase mb-1" data-cms-text="hero.mission_label">Dernière mission</p>
+                            <p id="hero-mission" data-cms-zone="hero.last_mission" class="text-xl font-bold">Saint Maurice-Navacelles — Élagage complet</p>
                         </div>
                     </div>
                     <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#A3B18A] rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" aria-hidden="true"></div>
@@ -382,11 +380,11 @@
     <section id="services" class="py-32">
         <div class="container mx-auto px-6">
             <div class="mb-20 gg-reveal">
-                <p class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">Savoir-faire</p>
-                <h2 class="text-4xl lg:text-5xl font-black mb-4 tracking-tighter">Services spécialisés</h2>
-                <p class="text-gray-500 font-medium max-w-2xl">Une approche respectueuse de l'environnement et de la biologie de l'arbre, adaptée à chaque terrain.</p>
+                <p class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4" data-cms-text="services.eyebrow">Savoir-faire</p>
+                <h2 class="text-4xl lg:text-5xl font-black mb-4 tracking-tighter" data-cms-text="services.title">Services spécialisés</h2>
+                <p class="text-gray-500 font-medium max-w-2xl" data-cms-text="services.intro">Une approche respectueuse de l'environnement et de la biologie de l'arbre, adaptée à chaque terrain.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid" data-cms-zone="services.service1_title">
             </div>
         </div>
     </section>
@@ -395,9 +393,9 @@
     <section id="certification" class="py-32 bg-[#EDF2E8] overflow-hidden">
         <div class="container mx-auto px-6">
             <div class="mb-20 max-w-3xl gg-reveal">
-                <p id="certification-eyebrow" class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">Formation & expertise</p>
-                <h2 id="certification-title" class="text-4xl lg:text-5xl font-black mb-4 tracking-tighter">Formation &amp; compétences</h2>
-                <p id="certification-intro" class="text-gray-500 font-medium leading-relaxed">Une formation à la grimpe et des méthodes éprouvées, pour des interventions sûres qui respectent le végétal.</p>
+                <p id="certification-eyebrow" data-cms-zone="certification.eyebrow" class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">Formation & expertise</p>
+                <h2 id="certification-title" data-cms-zone="certification.title" class="text-4xl lg:text-5xl font-black mb-4 tracking-tighter">Formation &amp; compétences</h2>
+                <p id="certification-intro" data-cms-zone="certification.intro" class="text-gray-500 font-medium leading-relaxed">Une formation à la grimpe et des méthodes éprouvées, pour des interventions sûres qui respectent le végétal.</p>
             </div>
 
             <div class="relative max-w-5xl mx-auto">
@@ -467,11 +465,11 @@
     <section id="realisations" class="py-32 bg-[#F5F5F0]">
         <div class="container mx-auto px-6">
             <div class="mb-20 gg-reveal">
-                <p class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">Sur le terrain</p>
-                <h2 class="text-4xl lg:text-5xl font-black mb-4 tracking-tighter">Réalisations</h2>
-                <p class="text-gray-500 font-medium">Chaque projet est unique, chaque arbre raconte une histoire. Cliquez sur une photo pour l'agrandir.</p>
+                <p class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4" data-cms-text="gallery.eyebrow">Sur le terrain</p>
+                <h2 class="text-4xl lg:text-5xl font-black mb-4 tracking-tighter" data-cms-text="gallery.title">Réalisations</h2>
+                <p class="text-gray-500 font-medium" data-cms-text="gallery.intro">Chaque projet est unique, chaque arbre raconte une histoire. Cliquez sur une photo pour l'agrandir.</p>
             </div>
-            <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4" data-cms-zone="gallery.photos">
                 <p class="text-gray-400 col-span-full text-center py-10">Aucune photo pour le moment.</p>
             </div>
         </div>
@@ -483,31 +481,31 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col lg:flex-row gap-20 relative z-10">
                 <div class="lg:w-1/2 gg-reveal">
-                    <p class="text-xs font-black uppercase tracking-[0.2em] text-[#A3B18A] mb-4">Contact</p>
-                    <h2 class="text-5xl lg:text-6xl font-black mb-8 tracking-tighter">On commence <br/> quand ?</h2>
-                    <p class="text-xl text-white/60 mb-12 max-w-sm leading-relaxed">Le plus simple : un coup de fil. Décrivez votre projet et recevez une estimation gratuite dans les meilleurs délais.</p>
+                    <p class="text-xs font-black uppercase tracking-[0.2em] text-[#A3B18A] mb-4" data-cms-text="contact.eyebrow">Contact</p>
+                    <h2 class="text-5xl lg:text-6xl font-black mb-8 tracking-tighter" data-cms-text="contact.title">On commence quand ?</h2>
+                    <p class="text-xl text-white/60 mb-12 max-w-sm leading-relaxed" data-cms-text="contact.intro">Le plus simple : un coup de fil. Décrivez votre projet et recevez une estimation gratuite dans les meilleurs délais.</p>
                     <div class="space-y-6">
                         <a href="tel:0647597465" id="contact-phone-link" class="flex items-center gap-6 group">
                             <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-[#A3B18A] group-hover:text-[#1A2F23] transition-all">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                             </div>
                             <div>
-                                <p class="text-[10px] font-black uppercase tracking-widest text-white/40">Téléphone</p>
-                                <p id="contact-phone-display" class="text-lg font-bold">06 47 59 74 65</p>
+                                <p class="text-[10px] font-black uppercase tracking-widest text-white/40" data-cms-text="contact.phone_label">Téléphone</p>
+                                <p id="contact-phone-display" data-cms-zone="contact.phone" class="text-lg font-bold">06 47 59 74 65</p>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="lg:w-1/2 bg-white rounded-[2.5rem] p-10 text-[#1A2F23] gg-reveal">
                     <div class="gg-call-card">
-                        <p class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4">Devis gratuit par téléphone</p>
-                        <h3 class="text-2xl font-black mb-4 tracking-tight">Un appel suffit</h3>
-                        <p class="text-gray-500 leading-relaxed mb-8">Décrivez votre projet en quelques mots : type de terrain, arbres concernés, accès au chantier. Une visite sur place est ensuite organisée pour établir un devis gratuit et sans engagement.</p>
+                        <p class="text-xs font-black uppercase tracking-[0.2em] text-[#588157] mb-4" data-cms-text="contact.carte_eyebrow">Devis gratuit par téléphone</p>
+                        <h3 class="text-2xl font-black mb-4 tracking-tight" data-cms-text="contact.carte_title">Un appel suffit</h3>
+                        <p class="text-gray-500 leading-relaxed mb-8" data-cms-text="contact.carte_text">Décrivez votre projet en quelques mots : type de terrain, arbres concernés, accès au chantier. Une visite sur place est ensuite organisée pour établir un devis gratuit et sans engagement.</p>
                         <a id="contact-call-btn" href="tel:0647597465" class="gg-call-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            <span id="contact-call-number">06 47 59 74 65</span>
+                            <span id="contact-call-number" data-cms-zone="contact.phone">06 47 59 74 65</span>
                         </a>
-                        <ul class="gg-call-points">
+                        <ul class="gg-call-points" data-cms-list="contact.carte_points">
                             <li>Devis gratuit et sans engagement</li>
                             <li>Réponse rapide, conseil direct</li>
                             <li>Aucune donnée collectée par ce site</li>
@@ -519,7 +517,7 @@
     </section>
 
     <!-- Footer -->
-    <footer data-cms="social" class="py-20 border-t border-gray-100">
+    <footer data-cms="social" data-cms-zone="social.facebook" class="py-20 border-t border-gray-100">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
                 <div>
@@ -527,9 +525,9 @@
                         <div class="w-12 h-12 bg-[#344E41] rounded-xl flex items-center justify-center overflow-hidden">
                             <img src="assets/logo.png" alt="Logo Guillaume Geysse, élagueur sur le Larzac" width="56" height="56" class="w-full h-full object-contain p-1">
                         </div>
-                        <span class="font-black text-lg tracking-tighter uppercase">Guillaume Geysse</span>
+                        <span class="font-black text-lg tracking-tighter uppercase" data-cms-text="footer.nom">Guillaume Geysse</span>
                     </div>
-                    <p class="text-sm text-gray-500 max-w-xs leading-relaxed">Élagage, débroussaillage et abattage contrôlé sur le Larzac, les Cévennes et alentours. Interventions au sol ou sur corde.</p>
+                    <p class="text-sm text-gray-500 max-w-xs leading-relaxed" data-cms-text="footer.description">Élagage, débroussaillage et abattage contrôlé sur le Larzac, les Cévennes et alentours. Interventions au sol ou sur corde.</p>
                 </div>
                 <div class="flex flex-wrap gap-16">
                     <div>
@@ -900,6 +898,7 @@
             })
         })
     </script>
+    <script defer src="cms.js" data-cms-repo="ZiToon34/geysse"></script>
     <script defer src="cms-bridge.js"></script>
 </body>
 </html>
