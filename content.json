@@ -368,7 +368,8 @@
             "abattage-demontage-arbre-cevennes.webp",
             "elagage-chantier-lodeve.webp",
             "img-2326-1787820975737.jpg",
-            "img-2324-1787820983498.jpg"
+            "img-2324-1787820983498.jpg",
+            "img-1955-1787821030173.jpg"
           ]
         },
         {
@@ -387,7 +388,7 @@
           "id": "intro",
           "label": "Texte d'introduction",
           "type": "text",
-          "value": "Chaque projet est unique, chaque arbre raconte une histoire. Cliquez sur une photo pour l'agrandir."
+          "value": "Chaque projet est unique. Cliquez sur une photo pour l'agrandir."
         },
         {
           "id": "vide",
