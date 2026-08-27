@@ -536,7 +536,7 @@
           "id": "intro",
           "label": "Texte d'introduction",
           "type": "text",
-          "value": "Vos arbres "
+          "value": ""
         },
         {
           "id": "btn",
