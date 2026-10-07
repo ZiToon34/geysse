@@ -38,7 +38,7 @@
           "id": "title_line1",
           "label": "Titre — 1re ligne",
           "type": "text",
-          "value": "L'art de la"
+          "value": ""
         },
         {
           "id": "mission_label",
